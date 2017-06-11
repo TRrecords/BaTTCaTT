@@ -1,0 +1,1008 @@
+﻿Version=6.8
+NumberOfModules=12
+Module1=klo
+Module2=cool
+Module3=Batut
+Module4=hw
+Module5=Starter
+Module6=sys
+Module7=settings
+Module8=ClsSlidingSideBar
+Module9=Charts
+Module10=KeyValueStore
+Module11=ClsCheckList
+Module12=ClsExplorer
+Build1=Default,com.batcat
+ManifestCode=AddManifestText(~\n~<uses-sdk android:minSdkVersion="18" android:targetSdkVersion="22"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>~\n~	<uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES"/>~\n~<uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>~\n~<uses-permission ~\n~android:name="android.permission.CLEAR_APP_CACHE"/>~\n~<uses-permission ~\n~android:name="android.permission.GET_TASKS"/>~\n~AddApplicationText(<Activity android:name="anywheresoftware.b4a.objects.preferenceactivity"/>~\n~<uses-permission~\n~  android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>~\n~<uses-permission~\n~  android:name="android.permission.READ_EXTERNAL_STORAGE"/>~\n~<uses-permission~\n~  android:name="android.permission.WRITE_SECURE_SETTINGS"/>~\n~<uses-permission~\n~  android:name="android.permission.PACKAGE_USAGE_STATS"/>~\n~  )~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~SetApplicationAttribute(android:largeHeap,"true")~\n~'SetApplicationAttribute(android:theme, "@style/Theme.AppCompat")~\n~SetApplicationAttribute(android:theme, "@style/MyAppTheme")~\n~CreateResource(values, theme.xml,~\n~<resources>~\n~    <style name="MyAppTheme" parent="Theme.AppCompat.Light.NoActionBar">~\n~        <item name="colorPrimary">#0091EA</item>~\n~        <item name="colorPrimaryDark">#78909C</item>~\n~        <item name="colorAccent">#C6FF00</item>~\n~        <item name="windowNoTitle">true</item>~\n~        <item name="windowActionBar">false</item>~\n~    </style>~\n~</resources>~\n~)~\n~
+IconFile=
+NumberOfFiles=31
+File1=1.bal
+File2=2.bal
+File3=4.bal
+File4=5.bal
+File5=6.bal
+File6=Accept128.png
+File7=Android.png
+File8=Battery icons - Colorful 64px (32).png
+File9=Battery Icons - White 64px (28).png
+File10=Battery Icons - White 64px (35).png
+File11=Battery Icons - White 64px (40).png
+File12=Battery.png
+File13=battery_status.png
+File14=Chart.png
+File15=Control.png
+File16=ic_autorenew_black_48dp.png
+File17=ic_battery_alert_black_48dp.png
+File18=ic_clear_black_48dp.png
+File19=ic_data_usage_black_48dp.png
+File20=ic_delete_black_48dp.png
+File21=ic_sim_card_black_24dp.png
+File22=ic_sim_card_white_24dp.png
+File23=ic_snooze_black_18dp.png
+File24=icon_batcat.png
+File25=keys.txt
+File26=Power.png
+File27=Rss.png
+File28=settings_pa.bal
+File29=sulo_log99.png
+File30=Tag.png
+File31=wid.bal
+NumberOfLibraries=23
+Library1=core
+Library2=phone
+Library3=reflection
+Library4=oslibrary
+Library5=progresswheel
+Library6=customtoast
+Library7=animation
+Library8=animationplus
+Library9=randomaccessfile
+Library10=sql
+Library11=cache
+Library12=cachecleaner
+Library13=dialogs
+Library14=javaobject
+Library15=activitymanager
+Library16=storage
+Library17=msshowtips
+Library18=scrollview2d
+Library19=numberprogressbar
+Library20=materialcolors
+Library21=materialcircleprogress
+Library22=appcompat
+Library23=xmlsax
+@EndOfDesignText@
+ #Region  Project Attributes 
+	#ApplicationLabel: BATT-Cat
+	#VersionCode: 233
+	#VersionName: 1.9.1
+	'SupportedOrientations possible values: unspecified, landscape or portrait.
+	#SupportedOrientations: portrait
+	#CanInstallToExternalStorage: false
+	#BridgeLogger:true
+	#AdditionalRes:"C:\Users\trow\Documents\Apps\Worground\RAM_Cat\res"
+#End Region
+	#Extends: android.support.v7.app.AppCompatActivity
+
+#Region  Activity Attributes 
+	#FullScreen: False
+	#IncludeTitle: True
+#End Region
+
+
+Sub Process_Globals
+	Dim pak As PackageManager
+	Private cs As CSBuilder
+End Sub
+
+Sub Globals
+	Private ProgressBar1 As ProgressBar
+	Private ra As OperatingSystem
+	Dim device As PhoneEvents
+	
+	Dim ct As CustomToast
+	Private pgWheel1 As pgWheel
+	Private Label1,Label2,Label3,Label4,lk As Label
+	Private ListView1,lv2,lvMenu As ListView
+	Dim args(1) As Object
+	Dim Obj1, Obj2, Obj3 As Reflector
+	Dim la,la1,la2 As Label
+	Dim ima As ImageView
+    Dim icon As BitmapDrawable
+	Dim logo As Bitmap
+	Dim bat As Batut
+	Private CheckBox1 As CheckBox
+	Private CheckBox2 As CheckBox
+	Dim volt,temp,level1 As String
+	Private Panel2,panel3,lip,setp,smlp As Panel
+	Dim kvs,kvs2,kvs3,kvs4,kvs4sub As KeyValueStore
+	'Dim cd As CustomDialog
+	Dim optmap As Map 
+	Private Label5 As Label
+	Private Label6 As Label
+	'Dim cc2 As ColorDrawable
+	Dim proc As List
+	Private Panel1 As Panel
+	Private showtip As MSShowTipsBuilder
+	Private slm As ClsSlidingSideBar
+	Dim cas As Int
+	Dim size,flags As Int
+	Dim Types(1), name,packName,date,time,l,ramsize As String
+	Dim list,list1,list2,list3,list4,list5,list6,phlis,lis,setlist,datalist As List
+
+	Dim cd2,cd As CustomDialog2
+
+	Dim FakeActionBar  As Panel
+	Dim sd,sdi As Bitmap
+	Private ACToolBarLight1 As ACToolBarLight
+	Private ToolbarHelper As ACActionBar
+	'Dim droid As BitmapDrawable
+	Private Button4 As ACButton
+'	Dim cc1,cc2,cc3,cc4,cc5,cc6,cc7,cc8,cc9,cc10,cc11,cc12,cc13,cc14,cc15 As ColorDrawable
+	Private c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,c11,c12,c13,c14,c15 As Int
+	Dim mcl As MaterialColors
+	Dim Mclist,ramlist As List
+
+
+End Sub 
+
+Sub Activity_Create(FirstTime As Boolean)
+
+	Activity.LoadLayout("1")
+	
+	'######### Main / Menu Settings ##########
+	Activity.Title=pak.GetApplicationLabel("com.batcat")&" - "&pak.GetVersionName("com.batcat")
+
+
+	'################SlidingMenu ettings######################
+	
+	ToolbarHelper.Initialize
+	'ToolbarHelper.ShowUpIndicator = False 'set to true to show the up arrow
+	ToolbarHelper.Hide
+	
+	'######### Sub initializes ###############
+	ra.Initialize("ra")
+	bat.Initialize
+	ct.Initialize
+	list.Initialize
+	list1.Initialize
+	list2.Initialize
+	list3.Initialize
+	list4.Initialize
+	list5.Initialize
+	list6.Initialize
+	phlis.Initialize
+	datalist.Initialize
+	setlist.Initialize
+	lv2.Initialize("lv2")
+	panel3.Initialize("panel3")
+	smlp.Initialize("smlp")
+	lip.Initialize("lip")
+	setp.Initialize("setp")
+	lis.Initialize
+	proc.Initialize
+	lk.Initialize("lk")
+	optmap.Initialize
+	la.Initialize("la")
+	la1.Initialize("la1")
+	la2.Initialize("la2")
+	ramlist.Initialize
+	panel3.AddView(lk,10,5,80%x,50%y)
+	lv2.FastScrollEnabled=True
+	logo.InitializeSample(File.DirAssets, "sulo_log99.png",48,48)
+	panel3.Color=Colors.Transparent
+	lip.Color=Colors.ARGB(255,77,79,79)
+	lip.Elevation=50dip
+	lip.AddView(lv2,1dip,1dip,-1,-1)
+	cd2.AddView(lip,-1,-1)
+	smlp.Enabled=True
+	showtip.Initialize("showtip")
+	ima.Initialize("ima")
+	ima.Bitmap=LoadBitmap(File.DirAssets,"icon_batcat.png")
+	panel3.AddView(ima,50,150,450,250)
+	'#######date Settings###############
+	 date=DateTime.Date(DateTime.Now)
+	 time=DateTime.Time(DateTime.Now)
+	 
+	volt=bat.BatteryInformation(7)/1000
+	temp=bat.BatteryInformation(6)/10
+	level1=bat.BatteryInformation(0)
+	'####### first start Use #################
+	If FirstTime=True Then
+		show_tip
+		
+		If File.Exists(File.DirDefaultExternal&"/mnt/cache","smap1.txt") Then 
+			ListView1.Clear
+			Else
+				File.MakeDir(File.DirDefaultExternal, "mnt/cache")
+				File.MakeDir(File.DirRootExternal, "mnt/data")
+	File.WriteList(File.DirDefaultExternal&"/mnt/cache","sv.txt",list4)
+	File.WriteList(File.DirDefaultExternal&"/mnt/cache","fn.txt",list1)
+	File.WriteList(File.DirDefaultExternal&"/mnt/cache","APnames.txt",list3)
+	File.WriteString(File.DirDefaultExternal&"/mnt/cache","lvl.txt",level1)
+	File.WriteString(File.DirDefaultExternal&"/mnt/cache","volt.txt","5")
+	File.WriteList(File.DirDefaultExternal&"/mnt/cache","pn1.txt",lis)
+	File.WriteList(File.DirDefaultExternal&"/mnt/cache","settings.txt",setlist)
+	File.WriteList(File.DirDefaultExternal&"/mnt/cache","proc.txt",proc)
+	File.WriteString(File.DirDefaultExternal&"/mnt/cache","lvl2.txt","0")
+	File.WriteMap(File.DirDefaultExternal&"/mnt/cache","smap1.txt",optmap)
+	ToastMessageShow("BC Log loaded! "&date&", "&time,False)
+	End If 
+	End If
+	'cc2.Initialize(Colors.ARGB(180,255,255,255),30)
+	'###############BatteryChart########
+	 device.Initialize("device")	
+
+	 Label2.Text= temp &"°C"
+	 Label4.Text= Round2(volt,1) &" V"
+	
+	
+	'######Label Settings##############
+	 Label3.Text="Ver. "&pak.GetVersionName("com.batcat")
+	 
+	'#######Listview Settings############
+	Dim BarSize As Int: BarSize = 60dip
+	FakeActionBar.Initialize("")
+	FakeActionBar.Color =  Colors.Transparent
+	Activity.AddView(FakeActionBar, 0, 0, 100%x, BarSize)
+	Activity.AddView(smlp,0,5dip,100%x,65%y)
+	slm.Initialize(smlp, 250dip, 1, 1, 100, 200)
+	slm.ContentPanel.Color = Colors.Transparent
+	slm.Sidebar.Background = slm.LoadDrawable("popup_top_dark")'("popup_top_bright")
+	slm.SetOnChangeListeners(Me, "Menu_onFullyOpen", "Menu_onFullyClosed", "Menu_onMove")
+	
+	lvMenu.Initialize("lvMenu")
+	Dim lvm1,lvm2 As Label
+	lvm1=lvMenu.TwoLinesAndBitmap.Label
+	lvm2=lvMenu.TwoLinesAndBitmap.SecondLabel
+	lvm1.TextColor = Colors.White
+	lvm1.textsize=14
+	lvm2.textsize=12
+	lvm2.textcolor=Colors.LightGray
+	lvMenu.TwoLinesAndBitmap.ImageView.Height=42dip
+	lvMenu.TwoLinesAndBitmap.ImageView.Width=42dip
+	lvMenu.AddTwoLinesAndBitmap2("System Info","Detail Phone Info",LoadBitmap(File.DirAssets,"Tag.png"),4)
+	lvMenu.AddTwoLinesAndBitmap2("Statistic","Battery Cyclus",LoadBitmap(File.DirAssets,"chart.png"),3)
+	lvMenu.AddTwoLinesAndBitmap2("Power","OS Power Menu",LoadBitmap(File.DirAssets,"Battery.png"),2)
+	lvMenu.AddTwoLinesAndBitmap2("Settings","Options Menu",LoadBitmap(File.DirAssets,"Control.png"),0)
+	lvMenu.AddTwoLinesAndBitmap2("Info","Version Info, über BC..",LoadBitmap(File.DirAssets, "Rss.png"),5)
+	lvMenu.AddTwoLinesAndBitmap2("Exit","Close the Application/Service",LoadBitmap(File.DirAssets,"Power.png"),1)
+	lvMenu.TwoLinesAndBitmap.ItemHeight=95
+	lvMenu.Color = Colors.Transparent
+	lvMenu.ScrollingBackgroundColor = Colors.Transparent
+	slm.Sidebar.AddView(lvMenu, 10dip,9dip, -1, -1)
+	'slm.SetOpenCloseButton(Button2)
+	slm.EnableSwipeGesture(True,400,1)
+	'FakeActionBar.Visible=False
+	'smlp.Visible=False
+
+	
+	 lv2.Enabled=True
+	 
+	setp.LoadLayout("settings_pa")
+
+	la=ListView1.SingleLineLayout.Label
+	la1=ListView1.TwoLinesLayout.Label
+	la2=ListView1.TwoLinesLayout.SecondLabel
+	'######################################################DATA STORE########################### 
+	kvs.Initialize(File.DirDefaultExternal, "datastore")
+	kvs2.Initialize(File.DirDefaultExternal, "datastore_2")
+	kvs3.Initialize(File.DirDefaultExternal, "datastore_3")
+	kvs4.Initialize(File.DirDefaultExternal, "datastore_4")
+	kvs4sub.Initialize(File.DirDefaultExternal, "datastore_sub_4")
+	'######################################################DATA STORE###########################
+	
+	
+	
+	'######################################################Activity Colors######################
+	Mclist.Initialize
+	
+	Mclist.Clear
+	Mclist.Add(c1)
+	Mclist.Add(c2)
+	Mclist.Add(c3)
+	Mclist.Add(c4)
+	c1=mcl.md_light_blue_A700
+	c2=mcl.md_amber_A700
+	c3=mcl.md_lime_A700
+	c4=mcl.md_teal_A700
+	c5=mcl.md_deep_purple_A700
+	c6=mcl.md_red_A700
+	c7=mcl.md_indigo_A700
+	c8=mcl.md_blue_A700
+	c9=mcl.md_orange_A700
+	c10=mcl.md_grey_700
+	c11=mcl.md_green_A700
+	c12=mcl.md_light_green_A700
+	c13=mcl.md_yellow_A700
+	c14=mcl.md_cyan_A700
+	c15=mcl.md_blue_grey_700
+	Activity.Color=c1
+	'######################################################Colors End###########################
+	ra.setLowMemory
+	'######################################################Start Subs###########################
+	app_info
+	 lab_set2
+	label_text
+	loading_norm
+	store_check
+	li2
+	'######################################################Subs End ###########################
+End Sub
+
+Sub Activity_Resume
+	app_info
+	lab_set2
+	label_text
+	loading_norm
+	store_check
+	li2
+End Sub
+
+Sub Activity_Pause (UserClosed As Boolean)
+	
+End Sub
+Sub  device_DeviceStorageOk (Intent As Intent)
+	Log(Intent.ExtrasToString)
+End Sub
+Sub show_tip	
+	slm.OpenSidebar
+		showtip.setCircleColor(Colors.ARGB(195,255,255,255))
+		showtip.setTitle(pak.GetApplicationLabel("com.batcat")).build
+		showtip.setDelay(400)
+		slm.OpenSidebar
+		showtip.build.setDescription("Swipe nach links zum öffnen und nach rechts zum schließen des Menü´s")
+		showtip.setTarget(smlp)
+		showtip.show
+End Sub
+
+Sub Menu_onFullyOpen
+	lvMenu.BringToFront
+	Button4.SendToBack
+	smlp.BringToFront
+	slm.Sidebar.BringToFront
+	Button4.SetLayoutAnimated(200,0%x,55%y,20%x,105)
+	Button4.ButtonColor=mcl.md_cyan_A400
+	Label1.SetLayout(40%x,40%y,40%x,90dip)
+	Button4.TextSize=10
+End Sub
+Sub Menu_onFullyClosed
+	smlp.SendToBack
+	lvMenu.SendToBack
+	Button4.BringToFront
+	Button4.ButtonColor=mcl.md_light_green_A400
+	Button4.BringToFront
+	 Button4.SetLayoutAnimated(200,20%x,55%y,60%x,105)
+	Label1.SetLayout(40%x,40%y,40%x,90dip)
+	Button4.TextSize=15
+End Sub
+
+Sub Menu_onMove (IsOpening As Boolean)
+	If IsOpening=True Then
+	
+		
+	End If 
+End Sub 
+
+Sub store_check
+	c1=mcl.md_light_blue_A700
+	c2=mcl.md_amber_A700
+	c3=mcl.md_lime_A700
+	c4=mcl.md_teal_A700
+	c5=mcl.md_deep_purple_A700
+	c6=mcl.md_red_A700
+	c7=mcl.md_indigo_A700
+	c8=mcl.md_blue_A700
+	c9=mcl.md_orange_A700
+	c10=mcl.md_grey_700
+	c11=mcl.md_green_A700
+	c12=mcl.md_light_green_A700
+	c13=mcl.md_yellow_A700
+	c14=mcl.md_cyan_A700
+	c15=mcl.md_blue_grey_700
+	If kvs4sub.ContainsKey("off") Then
+		StopService(Starter)
+		Else
+		
+	End If
+	If kvs4.ContainsKey("0")Then
+		Log("AC_true->1")
+		Activity.Color=c1
+		
+	Else
+	
+	End If
+	If kvs4.ContainsKey("0")Then
+		Log("AC_true->1")
+		Activity.Color=c1
+	End If
+	If kvs4.ContainsKey("1")Then
+		Log("AC_true->2")
+		Activity.Color=c2
+	Else
+		'Activity.Color=c1
+	End If
+	If kvs4.ContainsKey("2")Then
+		Log("AC_true->3")
+		Activity.Color=c3
+	Else
+		'Activity.Color=c1
+	End If
+	If kvs4.ContainsKey("3")Then
+		Log("AC_true->4")
+		Activity.Color=c4
+	Else
+		'Activity.Color=c4
+	End If
+	If kvs4.ContainsKey("4")Then
+		Log("AC_true->4")
+		Activity.Color=c5
+	Else
+		'Activity.Color=c4
+	End If
+	If kvs4.ContainsKey("5")Then
+		Log("AC_true->4")
+		Activity.Color=c6
+	Else
+		'Activity.Color=c4
+	End If
+	If kvs4.ContainsKey("6")Then
+		Log("AC_true->4")
+		Activity.Color=c7
+	Else
+		'Activity.Color=c4
+	End If
+	If kvs4.ContainsKey("7")Then
+		Log("AC_true->4")
+		Activity.Color=c8
+	Else
+		'Activity.Color=c4
+	End If
+	If kvs4.ContainsKey("8")Then
+		Log("AC_true->4")
+		Activity.Color=c9
+	Else
+		'Activity.Color=c4
+	End If
+	If kvs4.ContainsKey("9")Then
+		Log("AC_true->4")
+		Activity.Color=c10
+	Else
+		'Activity.Color=c4
+	End If
+	If kvs4.ContainsKey("10")Then
+		Log("AC_true->4")
+		Activity.Color=c11
+	Else
+		'Activity.Color=c4
+	End If
+	If kvs4.ContainsKey("11")Then
+		Log("AC_true->4")
+		Activity.Color=c12
+	Else
+		'Activity.Color=c4
+	End If
+	If kvs4.ContainsKey("12")Then
+		Log("AC_true->4")
+		Activity.Color=c13
+	Else
+		'Activity.Color=c4
+	End If
+	If kvs4.ContainsKey("13")Then
+		Log("AC_true->4")
+		Activity.Color=c14
+	Else
+		'Activity.Color=c4
+	End If
+	If kvs4.ContainsKey("14")Then
+		Log("AC_true->4")
+		Activity.Color=c15
+	Else
+		'Activity.Color=c4
+	End If
+	Activity.Invalidate
+End Sub
+
+Sub slem1_click
+	slem_click
+End Sub
+
+Sub slem_click
+	If slm.IsSidebarVisible Then
+		slm.CloseSidebar
+		Button4.Visible=True
+	
+	Else
+		lvMenu.BringToFront
+		smlp.BringToFront
+		slm.Sidebar.BringToFront
+		slm.OpenSidebar
+		'Button4.Visible=False
+	End If
+End Sub
+
+Sub re_bound
+	StartActivity(klo)
+End Sub
+
+Sub lvMenu_ItemClick (Position As Int, Value As Object)
+	 If Value = 0 Then 
+	 	opt_click
+		slm.CloseSidebar
+	End If
+	If Value=1 Then 
+		cl_click
+		slm.CloseSidebar
+	End If
+	If Value=2 Then
+		Dim i As Intent
+		i.Initialize( "android.intent.action.POWER_USAGE_SUMMARY", "")
+		slm.CloseSidebar
+		StartActivity(i)
+	End If
+	If Value=3 Then
+		StartActivity(klo)
+		slm.CloseSidebar
+	End If
+	If Value=4 Then
+		StartActivity(sys)
+		cl_click
+		slm.CloseSidebar
+	End If
+	If Value=5 Then
+		pci_click
+		slm.CloseSidebar
+	End If
+End Sub
+
+Sub button2_click
+	'slem_click
+End Sub
+
+
+Sub lab_set2
+	Dim la3 As Label
+	ListView1.Invalidate
+	la=ListView1.TwoLinesAndBitmap.Label
+	la2=ListView1.TwoLinesAndBitmap.SecondLabel
+	la1=ListView1.TwoLinesLayout.Label
+	la3=ListView1.TwoLinesLayout.SecondLabel
+	la.TextSize=13
+	la.TextColor=Colors.Black
+	la1.TextSize=13
+	la1.TextColor=Colors.Black
+	la2.TextSize=11
+	la2.TextColor=Colors.ARGB(150,255,255,255)
+	la3.TextColor=Colors.ARGB(100,255,255,255)
+	la3.TextSize=10
+	la1.TextSize=12
+	la1.TextColor=Colors.ARGB(180,255,255,255)
+	ListView1.TwoLinesAndBitmap.ImageView.Height=48dip
+	ListView1.TwoLinesAndBitmap.ImageView.Width=48dip
+	ListView1.TwoLinesAndBitmap.ItemHeight=60dip
+	ListView1.SingleLineLayout.ItemHeight=60dip
+	ListView1.TwoLinesLayout.ItemHeight=50dip
+End Sub
+
+Sub stat_me
+	StartActivity(klo)
+End Sub
+
+Sub sy_click
+	StartActivity(sys)
+	
+End Sub
+
+Sub st_click
+	StartActivity(klo)
+End Sub
+
+
+Sub Button4_Click
+	CallSubDelayed(cool,"c_start")
+End Sub
+
+Sub opt_click
+StartActivity(settings)
+End Sub
+
+Sub rl_lo
+	cd2.Show("User App´s","Check","","",LoadBitmap(File.DirAssets,"Android.png"))
+	If cd2.Response=DialogResponse.POSITIVE Then
+		ToastMessageShow("closed...",False)
+	End If
+	Return
+End Sub
+
+Sub label_text
+	lk.TextSize=13
+	lk.TextColor=Colors.Black
+	lk.Text="Version: "&pak.GetVersionName("com.batcat")&", Integer: "&pak.GetVersionCode("com.batcat")&". Coded in 'Basic' and 'Sun Java OpenSource' by D. Trojan, published by SuloMedia™. All Rights Reserved ©2017 "&pak.GetApplicationLabel("com.batcat")
+End Sub
+
+Sub pci_click
+	cd.AddView(panel3,-1,350)
+	cd.Show("About Batt-Cat: ","","Got It","",LoadBitmap(File.DirAssets, "Rss.png"))
+	If Not (cd2.Response=DialogResponse.CANCEL) Then
+		ct.ShowBitmap("©2017 SuloMedia™",30,Gravity.BOTTOM,0,0,logo)
+	End If
+End Sub
+
+Sub li3
+	app_info
+	Dim batteryInfo(11) As Int
+	batteryInfo = bat.BatteryInformation
+	For v = 0 To batteryInfo.Length - 1
+		Log(batteryInfo(v))
+	Next
+	volt=bat.BatteryInformation(7)/1000
+	temp=bat.BatteryInformation(6)/10
+	Dim piclist As List
+	piclist.Initialize
+	sd=LoadBitmap(File.DirAssets,"ic_sim_card_black_24dp.png")
+	sdi=LoadBitmap(File.DirAssets,"ic_sim_card_white_24dp.png")
+	Dim si,st As Int
+	st=ra.TotalExternalMemorySize+ra.TotalInternalMemorySize
+	'Log(ra.formatSize(st))
+	si=ra.AvailableExternalMemorySize+ra.AvailableInternalMemorySize
+	'Log(ra.formatSize(si))
+	ListView1.Clear
+	If ra.externalMemoryAvailable Then
+		Log("SUB-> "&ra.formatSize(cas))
+		Dim lz As Int
+		'Dim lmb As String 
+		For g = 0 To list3.Size-1
+			'Log(list3.Get(g))
+			lz=list3.size
+		Next
+		Dim pin As Int 
+		For v=0 To ramlist.size-1
+			pin=ramlist.Get(v)
+		Next
+		ListView1.AddTwoLinesAndbitmap2("SD Memory(Total): "&ra.formatSize(ra.TotalInternalMemorySize),lz&" apps installiert("&ra.formatSize(pin*1024)&") auf: "&GetParentPath(File.DirRootExternal&"/Android"),sd,2)
+		
+		ListView1.AddTwoLinesAndBitmap2("SD Used: "&ra.formatSize(si-st),GetParentPath(File.DirRootExternal&"/Android"),sd,3)
+		'ListView1.AddTwoLinesAndbitmap2("SD(Ext):",ra.formatSize(ra.TotalExternalMemorySize),sde,6)
+		ListView1.AddTwoLinesAndBitmap2("SD Free: "&ra.formatSize(ra.AvailableExternalMemorySize+ra.AvailableInternalMemorySize),GetParentPath(File.DirRootExternal&"/Android"),sd,4)
+		ListView1.AddTwoLinesAndbitmap2("SD (Intern): "&ra.formatSize(ra.TotalInternalMemorySize),GetParentPath(File.DirRootExternal&"/Android"),sdi,5)
+	Else
+		ListView1.AddTwoLinesAndbitmap2("SD Memory(Total):",ra.formatSize(ra.TotalInternalMemorySize+ra.TotalEXternalMemorySize),sd,2)
+		ListView1.AddTwoLinesAndbitmap2("SD(Inten):",ra.formatSize(ra.TotalInternalMemorySize),sdi,5)
+		ListView1.AddTwoLinesAndBitmap2("SD total Free:",ra.formatSize(ra.AvailableExternalMemorySize+ra.AvailableInternalMemorySize),sd,4)
+		ListView1.AddTwoLinesAndBitmap2("SD total Used:",ra.formatSize(si-st),sd,3)
+	End If
+
+End Sub
+
+
+
+Sub li2 As Boolean
+	list2.Clear
+	list4.Clear
+	proc.Clear
+	li3
+	Dim pin,pin2 As Int
+	Dim math As Int
+	Dim math1 As Int
+	Dim bb(0) As Byte 
+	proc=ra.getRecentTasks(99,0)
+	list2=ra.RunningServiceInfo(999,list4,list5,list6)
+		'ProgressBar1.Progress=100/ list1.size * list2.size + proc.Size
+	math1=proc.Size+list2.Size
+	Log(ra.formatSize(math1))
+	For h = 0 To list2.Size-1	
+		pin2=1000*1000*h
+		ProgressBar1.Progress=math1
+	Next
+	For v=0 To ramlist.size-1
+		Log(pin2)
+			Label5.Text="RAM: "&math1&"% "&ra.formatSize(pin2)	
+			
+	Next
+		
+	Return (True)
+End Sub
+
+Sub Label1_Click
+	StartActivity(sys)
+End Sub
+
+Sub Button1_Click
+	StartActivity(klo)
+End Sub
+
+Sub cl_click As Boolean
+'	Dim res As Int
+'	res=Msgbox2("App wird geschlossen Service Notification läuft im Hintergrund Prozess, zum deaktivieren bitte 'Settings->Start/stop Notify Service'.!","Bat-CaT beenden:","Ja","Abbruch","",LoadBitmap(File.DirAssets,"Power.png"))
+'	If res=DialogResponse.POSITIVE Then
+'		Activity.Finish
+'	Else
+'		If res=DialogResponse.CANCEL Then
+'			ToastMessageShow("zurück..",False)
+'		End If
+'	End If
+	'	Return(True)
+	Dim res As Int 
+	res=Msgbox2(cs.Initialize.Alignment("ALIGN_CENTER").Append($"pp wird geschlossen Service Notification läuft im Hintergrund Prozess, zum deaktivieren bitte 'Settings->Start/stop Notify Service'.!","Bat-CaT beenden:"$).PopAll, _
+cs.Initialize.Typeface(Typeface.FONTAWESOME).Color(0xFF01FF20).Size(40).PopAll,"ja","Abbruch","",LoadBitmap(File.DirAssets,"Power.png"))
+	If res=DialogResponse.POSITIVE Then
+		Activity.Finish
+	Else
+		If res=DialogResponse.CANCEL Then
+			ToastMessageShow("zurück..",False)
+		End If
+	End If
+	Return(True)
+End Sub
+
+Sub Activity_KeyPress (KeyCode As Int) As Boolean 'Return True to consume the event
+	If KeyCode=KeyCodes.KEYCODE_BACK Then
+		Activity.Finish
+		ToastMessageShow("BCT - Backround Service",False)
+	End If
+	Return(True)
+End Sub
+
+
+Sub Button3_Click
+	StartActivity(sys)
+End Sub
+
+
+Sub device_BatteryChanged (level As Int, Scale As Int, Plugged As Boolean, Intent As Intent)
+	
+	Dim rst As Int
+	Dim val,hours,minutes As Int
+	rst=level *1000 /60
+	File.WriteString(File.DirDefaultExternal&"/mnt/cache","lvl.txt",level)
+	File.WriteString(File.DirDefaultExternal&"/mnt/cache","volt.txt",volt)
+	pgWheel1.Text=level&"%"
+	
+	'plug_data
+	If Plugged=True Then
+		pgWheel1.computeScroll
+		pgWheel1.Progress=360/100*level
+			pgWheel1.spin
+		
+		If level=100 Then
+			pgWheel1.stopSpinning
+			pgWheel1.Progress=360
+			Label1.SetTextSizeAnimated(1000,20)
+		End If
+		val =Scale-level
+		hours = Floor(val / 60)
+		minutes = val Mod 60
+		Label4.Text="noch: "&hours&"h,"&minutes&"min"
+	Else
+		pgWheel1.Progress=360 / Scale * level
+		If level<=5 Then
+			Label1.TextColor=Colors.Red
+			Label1.TextSize=15
+			Label1.Text="Akku laden!"
+			low_power
+		End If
+		'Log("RM -> "&ConvertToTimeFormat(rm))
+		val =level * 1000 / 60
+		hours = Floor(val / 60)
+		minutes = val Mod 60
+		Label4.Text= "noch: "&hours&"h,"&minutes&"min"
+	End If
+
+End Sub
+
+
+Sub minutes_hours ( ms As Int ) As String
+	Dim val,hours,minutes As Int 
+	val = ms
+	hours = Floor(val / 60)
+	minutes = val Mod 60
+	Return NumberFormat(hours, 1, 0) & ":" & NumberFormat(minutes, 2, 0)
+End Sub 
+
+Sub Label4_Click
+	StartActivity(sys)
+End Sub
+
+Sub listview1_ItemClick (Position As Int, value As Object)
+	If Position=0 Then
+		rl_lo
+	End If 
+End Sub
+
+Sub loading_norm
+	pgWheel1.CircleRadius=100
+	pgWheel1.FocusableInTouchMode=True
+'	pgWheel1.CircleColor= Colors.ARGB(40,255,255,255)
+'	pgWheel1.ContourColor=Colors.ARGB(200,255,255,255)
+	'	pgWheel1.BarColor= Colors.ARGB(150,255,255,255)
+	pgWheel1.CircleColor= Colors.ARGB(0,255,255,255)
+	pgWheel1.ContourColor=Colors.ARGB(0,255,255,255)
+	pgWheel1.BarColor= mcl.md_white_1000
+	pgWheel1.ContourSize=1dip
+	pgWheel1.FadingEdgeLength=2dip
+	pgWheel1.TextSize=45
+	pgWheel1.TextColor=Colors.White
+	pgWheel1.SpinSpeed=5
+	pgWheel1.RimColor= Colors.Transparent'ARGB(255,255,255,255)
+	pgWheel1.RimWidth=20dip
+	pgWheel1.BarWidth=15dip
+	pgWheel1.DelayMillis=1
+	pgWheel1.Clickable=False
+	'pgWheel1.RimShader=LoadBitmap(File.DirAssets,"header.png")
+End Sub
+
+
+Sub low_power
+	pgWheel1.TextSize=45
+	pgWheel1.BarColor=Colors.Red
+	pgWheel1.CircleColor= Colors.ARGB(40,255,255,255)
+	pgWheel1.ContourColor=Colors.red
+	pgWheel1.ContourSize=1dip
+	pgWheel1.FadingEdgeLength=2dip
+	pgWheel1.TextColor=Colors.Black
+	pgWheel1.SpinSpeed=2
+	pgWheel1.RimColor= Colors.Transparent'ARGB(255,255,255,255)
+	pgWheel1.RimWidth=25dip
+	pgWheel1.BarWidth=20dip
+	pgWheel1.DelayMillis=1
+	pgWheel1.Clickable=False
+	pgWheel1.Focusable=False
+	'pgWheel1.RimShader=LoadBitmap(File.DirAssets,"header.png")
+End Sub
+
+Sub app_info
+	lv2.Clear
+	list3.Clear
+	ramlist.Clear
+	list1=pak.GetInstalledPackages
+	'Log(list1.Get(i))
+	Obj1.Target = Obj1.GetContext
+	Obj1.Target = Obj1.RunMethod("getPackageManager") ' PackageManager
+	Obj2.Target = Obj1.RunMethod2("getInstalledPackages", 0, "java.lang.int") ' List<PackageInfo>
+	size = Obj2.RunMethod("size")
+		
+	'packName = Obj3.GetField("packageName")
+	' name = Obj1.RunMethod4("getApplicationLabel", args, Types)
+	' icon = Obj1.RunMethod4("getApplicationIcon", args, Types)
+	For i = 0 To size -1
+		Obj3.Target = Obj2.RunMethod2("get", i, "java.lang.int") ' PackageInfo
+		size = Obj2.RunMethod("size")
+ 		
+		Obj3.Target = Obj3.GetField("applicationInfo") ' ApplicationInfo
+		flags = Obj3.GetField("flags")
+		packName = Obj3.GetField("packageName")
+		datalist.Add(packName)
+		If Bit.And(flags, 1)  = 0 Then
+          
+			'app is not in the system image
+			args(0) = Obj3.Target
+			Types(0) = "android.content.pm.ApplicationInfo"
+			name = Obj1.RunMethod4("getApplicationLabel", args, Types)
+			icon = Obj1.RunMethod4("getApplicationIcon", args, Types)
+             
+			list3.Add(packName)
+			
+			'Log(packName)
+			phlis.Add(icon.Bitmap)
+			cas =File.Size(GetParentPath(GetSourceDir(GetActivitiesInfo(packName))),GetFileName(GetSourceDir(GetActivitiesInfo(packName))))
+			File.WriteString(File.DirDefaultExternal,"r_a_memory.txt",cas)
+			
+			ramlist.Add(cas)
+			lv2.AddTwoLinesAndBitmap2(name,packName&" - "&ra.formatSize(cas),icon.Bitmap,packName)
+		End If
+		
+		'lis.Add(bu)
+		'list.Add(ba)
+		
+	Next
+
+End Sub
+
+Sub BytesToFile (Dir As String, FileName As String, Data() As Byte)
+	Dim out As OutputStream = File.OpenOutput(Dir, FileName, False)
+	out.WriteBytes(Data, 0, Data.Length)
+	out.Close
+End Sub
+
+Sub FileToBytes (Dir As String, FileName As String) As Byte()
+	Return Bit.InputStreamToBytes(File.OpenInput(Dir, FileName))
+End Sub
+
+Sub fc_CopyDone(Key As String, Error As Boolean)
+			
+End Sub
+
+Sub GetFileName(FullPath As String) As String
+	Return FullPath.SubString(FullPath.LastIndexOf("/")+1)
+End Sub
+
+Sub cli_click
+	'lis.Add("Optimierung "&date&", "&time)
+	StartActivity(cool)
+End Sub
+Sub InputList_CheckedChange(Checked As Boolean)
+	
+End Sub
+
+Sub GetParentPath(Path As String) As String
+	Dim Path1 As String
+	If Path = "/" Then
+		Return "/"
+	End If
+	L = Path.LastIndexOf("/")
+	If L = Path.Length - 1 Then
+		'Strip the last slash
+		Path1 = Path.SubString2(0,L)
+	Else
+		Path1 = Path
+	End If
+	L = Path.LastIndexOf("/")
+	If L = 0 Then
+		L = 1
+	End If
+	Return Path1.SubString2(0,L)
+End Sub
+
+Sub GetActivitiesInfo(package As String) As Object
+	Dim r As Reflector
+	r.Target = r.GetContext
+	r.Target = r.RunMethod("getPackageManager")
+	r.Target = r.RunMethod3("getPackageInfo", package, "java.lang.String", 0x00000001, "java.lang.int")
+	Return r.GetField("applicationInfo")
+End Sub
+
+Sub GetSourceDir(AppInfo As Object) As String
+	Try
+		Dim r As Reflector
+		r.Target = AppInfo
+		Return r.GetField("sourceDir")
+	Catch
+		Return ""
+	End Try
+End Sub
+
+#if java
+import android.view.*;
+import android.Manifest;
+import android.accounts.Account;
+import android.accounts.AccountManager;
+import android.annotation.TargetApi;
+import android.bluetooth.BluetoothAdapter;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageManager;
+import android.database.Cursor;
+import android.location.Location;
+import android.location.LocationManager;
+import android.media.AudioManager;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import android.net.Uri;
+import android.net.wifi.WifiManager;
+import android.os.BatteryManager;
+import android.os.Build;
+import android.provider.Settings;
+import android.telephony.TelephonyManager;
+import android.util.DisplayMetrics;
+import android.util.Log;
+import android.view.Display;
+import android.view.MotionEvent;
+import android.view.WindowManager;
+import android.webkit.WebView;
+//import com.google.android.gms.ads.identifier.AdvertisingIdClient;
+//import com.google.android.gms.common.GooglePlayServicesNotAvailableException;
+//import com.google.android.gms.common.GooglePlayServicesRepairableException;
+import java.io.File;
+import java.io.IOException;
+import java.net.Inet4Address;
+import java.net.InetAddress;
+import java.net.NetworkInterface;
+import java.util.Collections;
+import java.util.List;
+import java.util.Locale;
+import java.util.UUID;
+
+	
+#end if 
