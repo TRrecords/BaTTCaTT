@@ -74,8 +74,8 @@ Library23=xmlsax
 @EndOfDesignText@
  #Region  Project Attributes 
 	#ApplicationLabel: BATT-Cat
-	#VersionCode: 233
-	#VersionName: 1.9.1
+	#VersionCode: 235
+	#VersionName: 1.9.2
 	'SupportedOrientations possible values: unspecified, landscape or portrait.
 	#SupportedOrientations: portrait
 	#CanInstallToExternalStorage: false
@@ -347,20 +347,30 @@ Sub  device_DeviceStorageOk (Intent As Intent)
 End Sub
 Sub show_tip	
 	slm.OpenSidebar
+	showtip.setDelay(400)
 		showtip.setCircleColor(Colors.ARGB(195,255,255,255))
 		showtip.setTitle(pak.GetApplicationLabel("com.batcat")).build
-		showtip.setDelay(400)
-		slm.OpenSidebar
 		showtip.build.setDescription("Swipe nach links zum öffnen und nach rechts zum schließen des Menü´s")
-		showtip.setTarget(smlp)
+		showtip.setTarget(smlp).build
 		showtip.show
+		
+		
 End Sub
-
+Sub show_2
+	slm.CloseSidebar
+	showtip.setDelay(400)
+	showtip.setCircleColor(Colors.ARGB(195,255,255,255))
+	showtip.setTitle(pak.GetApplicationLabel("com.batcat")).build
+	showtip.build.setDescription("Tippe hier um dein Handy zu Boosten...")
+	showtip.setTarget(Button4)
+	showtip.show
+End Sub
 Sub Menu_onFullyOpen
 	lvMenu.BringToFront
 	Button4.SendToBack
 	smlp.BringToFront
 	slm.Sidebar.BringToFront
+	pgWheel1.Focusable=False
 	Button4.SetLayoutAnimated(200,0%x,55%y,20%x,105)
 	Button4.ButtonColor=mcl.md_cyan_A400
 	Label1.SetLayout(40%x,40%y,40%x,90dip)
@@ -372,6 +382,7 @@ Sub Menu_onFullyClosed
 	Button4.BringToFront
 	Button4.ButtonColor=mcl.md_light_green_A400
 	Button4.BringToFront
+	pgWheel1.Focusable=True
 	 Button4.SetLayoutAnimated(200,20%x,55%y,60%x,105)
 	Label1.SetLayout(40%x,40%y,40%x,90dip)
 	Button4.TextSize=15
@@ -510,12 +521,8 @@ End Sub
 Sub slem_click
 	If slm.IsSidebarVisible Then
 		slm.CloseSidebar
-		Button4.Visible=True
-	
 	Else
-		lvMenu.BringToFront
-		smlp.BringToFront
-		slm.Sidebar.BringToFront
+	
 		slm.OpenSidebar
 		'Button4.Visible=False
 	End If
@@ -648,28 +655,26 @@ Sub li3
 	'Log(ra.formatSize(si))
 	ListView1.Clear
 	If ra.externalMemoryAvailable Then
-		Log("SUB-> "&ra.formatSize(cas))
-		Dim lz As Int
-		'Dim lmb As String 
-		For g = 0 To list3.Size-1
-			'Log(list3.Get(g))
-			lz=list3.size
-		Next
-		Dim pin As Int 
-		For v=0 To ramlist.size-1
-			pin=ramlist.Get(v)
-		Next
-		ListView1.AddTwoLinesAndbitmap2("SD Memory(Total): "&ra.formatSize(ra.TotalInternalMemorySize),lz&" apps installiert("&ra.formatSize(pin*1024)&") auf: "&GetParentPath(File.DirRootExternal&"/Android"),sd,2)
 		
-		ListView1.AddTwoLinesAndBitmap2("SD Used: "&ra.formatSize(si-st),GetParentPath(File.DirRootExternal&"/Android"),sd,3)
+		Dim lz,az As Int
+		'Dim lmb As String 
+		For Each g As Int  In datalist
+			
+			lz=g
+			az=lz*1024*1024*10
+		Next
+		Log("SUB-> "&FormatFileSize(az))
+		ListView1.AddTwoLinesAndbitmap2("SD Memory(Total): "&FormatFileSize(ra.TotalInternalMemorySize),list3.size&" apps installiert("&FormatFileSize(az)&") auf: "&GetParentPath(File.DirRootExternal&"/Android"),sd,2)
+		
+		ListView1.AddTwoLinesAndBitmap2("SD Used: "&FormatFileSize(si-st),GetParentPath(File.DirRootExternal&"/Android"),sd,3)
 		'ListView1.AddTwoLinesAndbitmap2("SD(Ext):",ra.formatSize(ra.TotalExternalMemorySize),sde,6)
-		ListView1.AddTwoLinesAndBitmap2("SD Free: "&ra.formatSize(ra.AvailableExternalMemorySize+ra.AvailableInternalMemorySize),GetParentPath(File.DirRootExternal&"/Android"),sd,4)
-		ListView1.AddTwoLinesAndbitmap2("SD (Intern): "&ra.formatSize(ra.TotalInternalMemorySize),GetParentPath(File.DirRootExternal&"/Android"),sdi,5)
+		ListView1.AddTwoLinesAndBitmap2("SD Free: "&FormatFileSize(ra.AvailableExternalMemorySize+ra.AvailableInternalMemorySize),GetParentPath(File.DirRootExternal&"/Android"),sd,4)
+		ListView1.AddTwoLinesAndbitmap2("SD (Intern): "&FormatFileSize(ra.TotalInternalMemorySize),GetParentPath(File.DirRootExternal&"/Android"),sdi,5)
 	Else
-		ListView1.AddTwoLinesAndbitmap2("SD Memory(Total):",ra.formatSize(ra.TotalInternalMemorySize+ra.TotalEXternalMemorySize),sd,2)
-		ListView1.AddTwoLinesAndbitmap2("SD(Inten):",ra.formatSize(ra.TotalInternalMemorySize),sdi,5)
-		ListView1.AddTwoLinesAndBitmap2("SD total Free:",ra.formatSize(ra.AvailableExternalMemorySize+ra.AvailableInternalMemorySize),sd,4)
-		ListView1.AddTwoLinesAndBitmap2("SD total Used:",ra.formatSize(si-st),sd,3)
+		ListView1.AddTwoLinesAndbitmap2("SD Memory(Total):",FormatFileSize(ra.TotalInternalMemorySize+ra.TotalEXternalMemorySize),sd,2)
+		ListView1.AddTwoLinesAndbitmap2("SD(Inten):",FormatFileSize(ra.TotalInternalMemorySize),sdi,5)
+		ListView1.AddTwoLinesAndBitmap2("SD total Free:",FormatFileSize(ra.AvailableExternalMemorySize+ra.AvailableInternalMemorySize),sd,4)
+		ListView1.AddTwoLinesAndBitmap2("SD total Used:",FormatFileSize(si-st),sd,3)
 	End If
 
 End Sub
@@ -679,28 +684,67 @@ End Sub
 Sub li2 As Boolean
 	list2.Clear
 	list4.Clear
+	list5.Clear
+	list6.Clear
 	proc.Clear
+	ramlist.Clear
 	li3
-	Dim pin,pin2 As Int
-	Dim math As Int
-	Dim math1 As Int
-	Dim bb(0) As Byte 
 	proc=ra.getRecentTasks(99,0)
 	list2=ra.RunningServiceInfo(999,list4,list5,list6)
-		'ProgressBar1.Progress=100/ list1.size * list2.size + proc.Size
-	math1=proc.Size+list2.Size
-	Log(ra.formatSize(math1))
-	For h = 0 To list2.Size-1	
-		pin2=1000*1000*h
-		ProgressBar1.Progress=math1
-	Next
-	For v=0 To ramlist.size-1
-		Log(pin2)
-			Label5.Text="RAM: "&math1&"% "&ra.formatSize(pin2)	
+	'ProgressBar1.Progress=100/ list1.size * list2.size + proc.Size
+	
+	Dim math1 As Int
+	math1=proc.Size+list4.Size*1000*1024*10
+	Dim ti As Int=proc.Size+list4.Size
+	'Log(ra.formatSize(math1))
+	For h = 0 To list4.size-1
+		ramlist.Add(FormatFileSize(math1))
+		ProgressBar1.Progress=h
+		Next
+		For f = 0 To ramlist.Size-1
 			
+			Label5.Text=ti&"% "&ramlist.Get(f)
+		Next
+	
+	Return(True)
+End Sub
+	
+Sub CalcSize(Folder As String, recursive As Boolean) As Long
+	Dim size1 As Long
+	For Each f As String In File.ListFiles(Folder)
+		If recursive Then
+			If File.IsDirectory(Folder, f) Then
+				size1 = size1 + CalcSize(File.Combine(Folder, f),recursive)
+			End If
+		End If
+		size1 = size1 + File.Size(Folder, f)
 	Next
-		
-	Return (True)
+	Return size1
+End Sub
+
+Sub FormatFileSize(Bytes As Float) As String
+   
+	Private Unit() As String = Array As String(" Byte", " KB", " MB", " GB", " TB", " PB", " EB", " ZB", " YB")
+   
+	If Bytes = 0 Then
+                    
+		Return "0 Bytes"
+    
+	Else
+       
+		Private Po, Si As Double
+		Private I As Int
+       
+		Bytes = Abs(Bytes)
+                            
+		I = Floor(Logarithm(Bytes, 1024))
+		Po = Power(1024, I)
+		Si = Bytes / Po
+       
+		Return NumberFormat(Si, 1, 2) & Unit(I)
+       
+	End If
+   
 End Sub
 
 Sub Label1_Click
@@ -750,14 +794,15 @@ End Sub
 
 
 Sub device_BatteryChanged (level As Int, Scale As Int, Plugged As Boolean, Intent As Intent)
+	li2
+	' rst As Int
+	Dim val,hours,minutes,rst As Int
+	Dim status As Int = Intent.GetExtra("voltage")
 	
-	Dim rst As Int
-	Dim val,hours,minutes As Int
-	rst=level *1000 /60
 	File.WriteString(File.DirDefaultExternal&"/mnt/cache","lvl.txt",level)
 	File.WriteString(File.DirDefaultExternal&"/mnt/cache","volt.txt",volt)
 	pgWheel1.Text=level&"%"
-	
+	'rst=level *1000 /60
 	'plug_data
 	If Plugged=True Then
 		pgWheel1.computeScroll
@@ -769,7 +814,8 @@ Sub device_BatteryChanged (level As Int, Scale As Int, Plugged As Boolean, Inten
 			pgWheel1.Progress=360
 			Label1.SetTextSizeAnimated(1000,20)
 		End If
-		val =Scale-level
+		
+		val =Scale-level '/60
 		hours = Floor(val / 60)
 		minutes = val Mod 60
 		Label4.Text="noch: "&hours&"h,"&minutes&"min"
@@ -782,7 +828,8 @@ Sub device_BatteryChanged (level As Int, Scale As Int, Plugged As Boolean, Inten
 			low_power
 		End If
 		'Log("RM -> "&ConvertToTimeFormat(rm))
-		val =level * 1000 / 60
+		
+		val =level+status  / 60
 		hours = Floor(val / 60)
 		minutes = val Mod 60
 		Label4.Text= "noch: "&hours&"h,"&minutes&"min"
@@ -853,7 +900,8 @@ End Sub
 Sub app_info
 	lv2.Clear
 	list3.Clear
-	ramlist.Clear
+	datalist.Clear
+	'ramlist.Clear
 	list1=pak.GetInstalledPackages
 	'Log(list1.Get(i))
 	Obj1.Target = Obj1.GetContext
@@ -871,7 +919,7 @@ Sub app_info
 		Obj3.Target = Obj3.GetField("applicationInfo") ' ApplicationInfo
 		flags = Obj3.GetField("flags")
 		packName = Obj3.GetField("packageName")
-		datalist.Add(packName)
+		'datalist.Add(packName)
 		If Bit.And(flags, 1)  = 0 Then
           
 			'app is not in the system image
@@ -884,11 +932,12 @@ Sub app_info
 			
 			'Log(packName)
 			phlis.Add(icon.Bitmap)
-			cas =File.Size(GetParentPath(GetSourceDir(GetActivitiesInfo(packName))),GetFileName(GetSourceDir(GetActivitiesInfo(packName))))
-			File.WriteString(File.DirDefaultExternal,"r_a_memory.txt",cas)
-			
-			ramlist.Add(cas)
-			lv2.AddTwoLinesAndBitmap2(name,packName&" - "&ra.formatSize(cas),icon.Bitmap,packName)
+			'File.WriteString(File.DirDefaultExternal,"r_a_memory.txt",cas)
+			'cas=File.Size()
+			Dim form As Int 
+			form=File.Size(GetParentPath(GetSourceDir(GetActivitiesInfo(packName))),GetFileName(GetSourceDir(GetActivitiesInfo(packName))))
+			datalist.Add(form)
+			lv2.AddTwoLinesAndBitmap2(name,packName&" - "&FormatFileSize(form),icon.Bitmap,packName)
 		End If
 		
 		'lis.Add(bu)

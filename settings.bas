@@ -171,6 +171,7 @@ Sub ACSwitch1_CheckedChange(Checked As Boolean)
 	If Not(Checked=True) Then
 		dev.StopListening
 		StopService(Starter)
+		'StopService(hw)
 		kvs4sub.DeleteAll
 		kvs4sub.PutSimple("off",Checked)
 		Log("end")
@@ -178,6 +179,7 @@ Sub ACSwitch1_CheckedChange(Checked As Boolean)
 			If kvs4sub.ContainsKey("off") Then 
 				kvs4sub.DeleteAll
 			StartService(Starter)
+			'StartService(hw)
 			ToastMessageShow("Service started,,",False)
 			Log("start")
 			End If 

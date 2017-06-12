@@ -102,7 +102,7 @@ Sub device_BatteryChanged (Level As Int, Scale As Int, Plugged As Boolean, Inten
 	File.WriteString(File.DirDefaultExternal&"/mnt/cache","volt.txt",volt)
 	
 	If Plugged  Then
-		For v = 0 To Scale Step 4
+		For v = 0 To Scale Step 2
 	nl.Add(v)
 	If Level=v Then
 		Log("Put-> "&v)
@@ -119,7 +119,7 @@ Sub device_BatteryChanged (Level As Int, Scale As Int, Plugged As Boolean, Inten
 		'sql1.ExecNonQuery("INSERT INTO stats VALUES (NULL,"& tt &"," & level1 &")")
 		Service.StartForeground(1,sNotif)
 	Else
-		For v = 0 To Scale Step 4
+		For v = 0 To Scale Step 2
 			nl.Add(v)
 			If Level=v Then
 				Log("Put-> "&v)

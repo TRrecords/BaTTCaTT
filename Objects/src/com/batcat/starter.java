@@ -201,9 +201,9 @@ anywheresoftware.b4a.keywords.Common.File.WriteString(anywheresoftware.b4a.keywo
 anywheresoftware.b4a.keywords.Common.File.WriteString(anywheresoftware.b4a.keywords.Common.File.getDirDefaultExternal()+"/mnt/cache","volt.txt",_volt);
  //BA.debugLineNum = 99;BA.debugLine="If Plugged  Then";
 if (_plugged) { 
- //BA.debugLineNum = 100;BA.debugLine="For v = 0 To Scale Step 4";
+ //BA.debugLineNum = 100;BA.debugLine="For v = 0 To Scale Step 2";
 {
-final int step15 = (int) (4);
+final int step15 = (int) (2);
 final int limit15 = _scale;
 for (_v = (int) (0) ; (step15 > 0 && _v <= limit15) || (step15 < 0 && _v >= limit15); _v = ((int)(0 + _v + step15)) ) {
  //BA.debugLineNum = 101;BA.debugLine="nl.Add(v)";
@@ -234,9 +234,9 @@ _snotif.Notify((int) (1));
  //BA.debugLineNum = 115;BA.debugLine="Service.StartForeground(1,sNotif)";
 mostCurrent._service.StartForeground((int) (1),(android.app.Notification)(_snotif.getObject()));
  }else {
- //BA.debugLineNum = 117;BA.debugLine="For v = 0 To Scale Step 4";
+ //BA.debugLineNum = 117;BA.debugLine="For v = 0 To Scale Step 2";
 {
-final int step31 = (int) (4);
+final int step31 = (int) (2);
 final int limit31 = _scale;
 for (_v = (int) (0) ; (step31 > 0 && _v <= limit31) || (step31 < 0 && _v >= limit31); _v = ((int)(0 + _v + step31)) ) {
  //BA.debugLineNum = 118;BA.debugLine="nl.Add(v)";

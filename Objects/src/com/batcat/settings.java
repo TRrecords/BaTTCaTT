@@ -398,251 +398,251 @@ public static String  _ac_color() throws Exception{
 return "";
 }
 public static String  _acactionmenu1_menuitemclick(de.amberhome.objects.appcompat.ACMenuItemWrapper _item) throws Exception{
- //BA.debugLineNum = 466;BA.debugLine="Sub ACActionMenu1_MenuItemClick (Item As ACMenuIte";
- //BA.debugLineNum = 468;BA.debugLine="End Sub";
+ //BA.debugLineNum = 468;BA.debugLine="Sub ACActionMenu1_MenuItemClick (Item As ACMenuIte";
+ //BA.debugLineNum = 470;BA.debugLine="End Sub";
 return "";
 }
 public static String  _acbutton1_click() throws Exception{
- //BA.debugLineNum = 198;BA.debugLine="Sub ACButton1_Click";
- //BA.debugLineNum = 199;BA.debugLine="If Not(Panel2.Visible=True) Then";
+ //BA.debugLineNum = 200;BA.debugLine="Sub ACButton1_Click";
+ //BA.debugLineNum = 201;BA.debugLine="If Not(Panel2.Visible=True) Then";
 if (anywheresoftware.b4a.keywords.Common.Not(mostCurrent._panel2.getVisible()==anywheresoftware.b4a.keywords.Common.True)) { 
- //BA.debugLineNum = 200;BA.debugLine="popa.Show";
+ //BA.debugLineNum = 202;BA.debugLine="popa.Show";
 mostCurrent._popa.Show();
  }else {
- //BA.debugLineNum = 202;BA.debugLine="popa.Close";
+ //BA.debugLineNum = 204;BA.debugLine="popa.Close";
 mostCurrent._popa.Close();
  };
- //BA.debugLineNum = 204;BA.debugLine="End Sub";
+ //BA.debugLineNum = 206;BA.debugLine="End Sub";
 return "";
 }
 public static String  _acspinner1_itemclick(int _position,Object _value) throws Exception{
- //BA.debugLineNum = 343;BA.debugLine="Sub ACSpinner1_ItemClick (Position As Int, Value A";
- //BA.debugLineNum = 344;BA.debugLine="Value=ACSpinner1.SelectedIndex";
+ //BA.debugLineNum = 345;BA.debugLine="Sub ACSpinner1_ItemClick (Position As Int, Value A";
+ //BA.debugLineNum = 346;BA.debugLine="Value=ACSpinner1.SelectedIndex";
 _value = (Object)(mostCurrent._acspinner1.getSelectedIndex());
- //BA.debugLineNum = 345;BA.debugLine="ACSpinner1.SelectedIndex=Position";
+ //BA.debugLineNum = 347;BA.debugLine="ACSpinner1.SelectedIndex=Position";
 mostCurrent._acspinner1.setSelectedIndex(_position);
- //BA.debugLineNum = 346;BA.debugLine="If Position=0 Then";
+ //BA.debugLineNum = 348;BA.debugLine="If Position=0 Then";
 if (_position==0) { 
- //BA.debugLineNum = 347;BA.debugLine="kvs4.DeleteAll";
+ //BA.debugLineNum = 349;BA.debugLine="kvs4.DeleteAll";
 mostCurrent._kvs4._deleteall();
- //BA.debugLineNum = 348;BA.debugLine="kvs4.PutSimple(\"0\",Value)";
+ //BA.debugLineNum = 350;BA.debugLine="kvs4.PutSimple(\"0\",Value)";
 mostCurrent._kvs4._putsimple("0",_value);
- //BA.debugLineNum = 349;BA.debugLine="ToastMessageShow(\"light blue\",False)";
+ //BA.debugLineNum = 351;BA.debugLine="ToastMessageShow(\"light blue\",False)";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("light blue"),anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 350;BA.debugLine="Activity.Color=c16";
+ //BA.debugLineNum = 352;BA.debugLine="Activity.Color=c16";
 mostCurrent._activity.setColor(_c16);
- //BA.debugLineNum = 351;BA.debugLine="Log(\"Is in Store\")";
+ //BA.debugLineNum = 353;BA.debugLine="Log(\"Is in Store\")";
 anywheresoftware.b4a.keywords.Common.Log("Is in Store");
  };
- //BA.debugLineNum = 353;BA.debugLine="If Position=1 Then";
+ //BA.debugLineNum = 355;BA.debugLine="If Position=1 Then";
 if (_position==1) { 
- //BA.debugLineNum = 354;BA.debugLine="kvs4.DeleteAll";
+ //BA.debugLineNum = 356;BA.debugLine="kvs4.DeleteAll";
 mostCurrent._kvs4._deleteall();
- //BA.debugLineNum = 355;BA.debugLine="kvs4.PutSimple(\"1\",Value)";
+ //BA.debugLineNum = 357;BA.debugLine="kvs4.PutSimple(\"1\",Value)";
 mostCurrent._kvs4._putsimple("1",_value);
- //BA.debugLineNum = 356;BA.debugLine="ToastMessageShow(\"Amber \",False)";
+ //BA.debugLineNum = 358;BA.debugLine="ToastMessageShow(\"Amber \",False)";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("Amber "),anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 357;BA.debugLine="Log(\"New Store\")";
+ //BA.debugLineNum = 359;BA.debugLine="Log(\"New Store\")";
 anywheresoftware.b4a.keywords.Common.Log("New Store");
- //BA.debugLineNum = 358;BA.debugLine="Activity.Color=c2";
+ //BA.debugLineNum = 360;BA.debugLine="Activity.Color=c2";
 mostCurrent._activity.setColor(_c2);
  };
- //BA.debugLineNum = 360;BA.debugLine="If Position=2 Then";
+ //BA.debugLineNum = 362;BA.debugLine="If Position=2 Then";
 if (_position==2) { 
- //BA.debugLineNum = 361;BA.debugLine="kvs4.DeleteAll";
+ //BA.debugLineNum = 363;BA.debugLine="kvs4.DeleteAll";
 mostCurrent._kvs4._deleteall();
- //BA.debugLineNum = 362;BA.debugLine="kvs4.PutSimple(\"2\",Value)";
+ //BA.debugLineNum = 364;BA.debugLine="kvs4.PutSimple(\"2\",Value)";
 mostCurrent._kvs4._putsimple("2",_value);
- //BA.debugLineNum = 363;BA.debugLine="ToastMessageShow(\"Lime \",False)";
+ //BA.debugLineNum = 365;BA.debugLine="ToastMessageShow(\"Lime \",False)";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("Lime "),anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 364;BA.debugLine="Log(\"Now Stored\")";
+ //BA.debugLineNum = 366;BA.debugLine="Log(\"Now Stored\")";
 anywheresoftware.b4a.keywords.Common.Log("Now Stored");
- //BA.debugLineNum = 365;BA.debugLine="Activity.Color=c3";
+ //BA.debugLineNum = 367;BA.debugLine="Activity.Color=c3";
 mostCurrent._activity.setColor(_c3);
- //BA.debugLineNum = 366;BA.debugLine="Activity.Invalidate";
+ //BA.debugLineNum = 368;BA.debugLine="Activity.Invalidate";
 mostCurrent._activity.Invalidate();
  };
- //BA.debugLineNum = 368;BA.debugLine="If Position=3 Then";
+ //BA.debugLineNum = 370;BA.debugLine="If Position=3 Then";
 if (_position==3) { 
- //BA.debugLineNum = 369;BA.debugLine="kvs4.DeleteAll";
+ //BA.debugLineNum = 371;BA.debugLine="kvs4.DeleteAll";
 mostCurrent._kvs4._deleteall();
- //BA.debugLineNum = 370;BA.debugLine="kvs4.PutSimple(\"3\",Value)";
+ //BA.debugLineNum = 372;BA.debugLine="kvs4.PutSimple(\"3\",Value)";
 mostCurrent._kvs4._putsimple("3",_value);
- //BA.debugLineNum = 371;BA.debugLine="ToastMessageShow(\"Teal \",False)";
+ //BA.debugLineNum = 373;BA.debugLine="ToastMessageShow(\"Teal \",False)";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("Teal "),anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 372;BA.debugLine="Log(\"Stored ---\")";
+ //BA.debugLineNum = 374;BA.debugLine="Log(\"Stored ---\")";
 anywheresoftware.b4a.keywords.Common.Log("Stored ---");
- //BA.debugLineNum = 373;BA.debugLine="Activity.Color=c4";
+ //BA.debugLineNum = 375;BA.debugLine="Activity.Color=c4";
 mostCurrent._activity.setColor(_c4);
- //BA.debugLineNum = 374;BA.debugLine="Activity.Invalidate";
+ //BA.debugLineNum = 376;BA.debugLine="Activity.Invalidate";
 mostCurrent._activity.Invalidate();
  };
- //BA.debugLineNum = 376;BA.debugLine="If Position=4 Then";
+ //BA.debugLineNum = 378;BA.debugLine="If Position=4 Then";
 if (_position==4) { 
- //BA.debugLineNum = 377;BA.debugLine="kvs4.DeleteAll";
+ //BA.debugLineNum = 379;BA.debugLine="kvs4.DeleteAll";
 mostCurrent._kvs4._deleteall();
- //BA.debugLineNum = 378;BA.debugLine="kvs4.PutSimple(\"4\",Value)";
+ //BA.debugLineNum = 380;BA.debugLine="kvs4.PutSimple(\"4\",Value)";
 mostCurrent._kvs4._putsimple("4",_value);
- //BA.debugLineNum = 379;BA.debugLine="ToastMessageShow(\"purple(dark) \",False)";
+ //BA.debugLineNum = 381;BA.debugLine="ToastMessageShow(\"purple(dark) \",False)";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("purple(dark) "),anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 380;BA.debugLine="Log(\"Stored ---\")";
+ //BA.debugLineNum = 382;BA.debugLine="Log(\"Stored ---\")";
 anywheresoftware.b4a.keywords.Common.Log("Stored ---");
- //BA.debugLineNum = 381;BA.debugLine="Activity.Color=c5";
+ //BA.debugLineNum = 383;BA.debugLine="Activity.Color=c5";
 mostCurrent._activity.setColor(_c5);
- //BA.debugLineNum = 382;BA.debugLine="Activity.Invalidate";
+ //BA.debugLineNum = 384;BA.debugLine="Activity.Invalidate";
 mostCurrent._activity.Invalidate();
  };
- //BA.debugLineNum = 384;BA.debugLine="If Position=5 Then";
+ //BA.debugLineNum = 386;BA.debugLine="If Position=5 Then";
 if (_position==5) { 
- //BA.debugLineNum = 385;BA.debugLine="kvs4.DeleteAll";
+ //BA.debugLineNum = 387;BA.debugLine="kvs4.DeleteAll";
 mostCurrent._kvs4._deleteall();
- //BA.debugLineNum = 386;BA.debugLine="kvs4.PutSimple(\"5\",Value)";
+ //BA.debugLineNum = 388;BA.debugLine="kvs4.PutSimple(\"5\",Value)";
 mostCurrent._kvs4._putsimple("5",_value);
- //BA.debugLineNum = 387;BA.debugLine="ToastMessageShow(\"red \",False)";
+ //BA.debugLineNum = 389;BA.debugLine="ToastMessageShow(\"red \",False)";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("red "),anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 388;BA.debugLine="Log(\"Stored ---\")";
+ //BA.debugLineNum = 390;BA.debugLine="Log(\"Stored ---\")";
 anywheresoftware.b4a.keywords.Common.Log("Stored ---");
- //BA.debugLineNum = 389;BA.debugLine="Activity.Color=c6";
+ //BA.debugLineNum = 391;BA.debugLine="Activity.Color=c6";
 mostCurrent._activity.setColor(_c6);
- //BA.debugLineNum = 390;BA.debugLine="Activity.Invalidate";
+ //BA.debugLineNum = 392;BA.debugLine="Activity.Invalidate";
 mostCurrent._activity.Invalidate();
  };
- //BA.debugLineNum = 392;BA.debugLine="If Position=6 Then";
+ //BA.debugLineNum = 394;BA.debugLine="If Position=6 Then";
 if (_position==6) { 
- //BA.debugLineNum = 393;BA.debugLine="kvs4.DeleteAll";
+ //BA.debugLineNum = 395;BA.debugLine="kvs4.DeleteAll";
 mostCurrent._kvs4._deleteall();
- //BA.debugLineNum = 394;BA.debugLine="kvs4.PutSimple(\"6\",Value)";
+ //BA.debugLineNum = 396;BA.debugLine="kvs4.PutSimple(\"6\",Value)";
 mostCurrent._kvs4._putsimple("6",_value);
- //BA.debugLineNum = 395;BA.debugLine="ToastMessageShow(\"indigo \",False)";
+ //BA.debugLineNum = 397;BA.debugLine="ToastMessageShow(\"indigo \",False)";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("indigo "),anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 396;BA.debugLine="Log(\"Stored ---\")";
+ //BA.debugLineNum = 398;BA.debugLine="Log(\"Stored ---\")";
 anywheresoftware.b4a.keywords.Common.Log("Stored ---");
- //BA.debugLineNum = 397;BA.debugLine="Activity.Color=c7";
+ //BA.debugLineNum = 399;BA.debugLine="Activity.Color=c7";
 mostCurrent._activity.setColor(_c7);
- //BA.debugLineNum = 398;BA.debugLine="Activity.Invalidate";
+ //BA.debugLineNum = 400;BA.debugLine="Activity.Invalidate";
 mostCurrent._activity.Invalidate();
  };
- //BA.debugLineNum = 400;BA.debugLine="If Position=7 Then";
+ //BA.debugLineNum = 402;BA.debugLine="If Position=7 Then";
 if (_position==7) { 
- //BA.debugLineNum = 401;BA.debugLine="kvs4.DeleteAll";
+ //BA.debugLineNum = 403;BA.debugLine="kvs4.DeleteAll";
 mostCurrent._kvs4._deleteall();
- //BA.debugLineNum = 402;BA.debugLine="kvs4.PutSimple(\"7\",Value)";
+ //BA.debugLineNum = 404;BA.debugLine="kvs4.PutSimple(\"7\",Value)";
 mostCurrent._kvs4._putsimple("7",_value);
- //BA.debugLineNum = 403;BA.debugLine="ToastMessageShow(\"blue \",False)";
+ //BA.debugLineNum = 405;BA.debugLine="ToastMessageShow(\"blue \",False)";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("blue "),anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 404;BA.debugLine="Log(\"Stored ---\")";
+ //BA.debugLineNum = 406;BA.debugLine="Log(\"Stored ---\")";
 anywheresoftware.b4a.keywords.Common.Log("Stored ---");
- //BA.debugLineNum = 405;BA.debugLine="Activity.Color=c8";
+ //BA.debugLineNum = 407;BA.debugLine="Activity.Color=c8";
 mostCurrent._activity.setColor(_c8);
- //BA.debugLineNum = 406;BA.debugLine="Activity.Invalidate";
+ //BA.debugLineNum = 408;BA.debugLine="Activity.Invalidate";
 mostCurrent._activity.Invalidate();
  };
- //BA.debugLineNum = 408;BA.debugLine="If Position=8 Then";
+ //BA.debugLineNum = 410;BA.debugLine="If Position=8 Then";
 if (_position==8) { 
- //BA.debugLineNum = 409;BA.debugLine="kvs4.DeleteAll";
+ //BA.debugLineNum = 411;BA.debugLine="kvs4.DeleteAll";
 mostCurrent._kvs4._deleteall();
- //BA.debugLineNum = 410;BA.debugLine="kvs4.PutSimple(\"8\",Value)";
+ //BA.debugLineNum = 412;BA.debugLine="kvs4.PutSimple(\"8\",Value)";
 mostCurrent._kvs4._putsimple("8",_value);
- //BA.debugLineNum = 411;BA.debugLine="ToastMessageShow(\"orange\",False)";
+ //BA.debugLineNum = 413;BA.debugLine="ToastMessageShow(\"orange\",False)";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("orange"),anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 412;BA.debugLine="Log(\"Stored ---\")";
+ //BA.debugLineNum = 414;BA.debugLine="Log(\"Stored ---\")";
 anywheresoftware.b4a.keywords.Common.Log("Stored ---");
- //BA.debugLineNum = 413;BA.debugLine="Activity.Color=c9";
+ //BA.debugLineNum = 415;BA.debugLine="Activity.Color=c9";
 mostCurrent._activity.setColor(_c9);
- //BA.debugLineNum = 414;BA.debugLine="Activity.Invalidate";
+ //BA.debugLineNum = 416;BA.debugLine="Activity.Invalidate";
 mostCurrent._activity.Invalidate();
  };
- //BA.debugLineNum = 416;BA.debugLine="If Position=9 Then";
+ //BA.debugLineNum = 418;BA.debugLine="If Position=9 Then";
 if (_position==9) { 
- //BA.debugLineNum = 417;BA.debugLine="kvs4.DeleteAll";
+ //BA.debugLineNum = 419;BA.debugLine="kvs4.DeleteAll";
 mostCurrent._kvs4._deleteall();
- //BA.debugLineNum = 418;BA.debugLine="kvs4.PutSimple(\"9\",Value)";
+ //BA.debugLineNum = 420;BA.debugLine="kvs4.PutSimple(\"9\",Value)";
 mostCurrent._kvs4._putsimple("9",_value);
- //BA.debugLineNum = 419;BA.debugLine="ToastMessageShow(\"grey \",False)";
+ //BA.debugLineNum = 421;BA.debugLine="ToastMessageShow(\"grey \",False)";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("grey "),anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 420;BA.debugLine="Log(\"Stored ---\")";
+ //BA.debugLineNum = 422;BA.debugLine="Log(\"Stored ---\")";
 anywheresoftware.b4a.keywords.Common.Log("Stored ---");
- //BA.debugLineNum = 421;BA.debugLine="Activity.Color=c10";
+ //BA.debugLineNum = 423;BA.debugLine="Activity.Color=c10";
 mostCurrent._activity.setColor(_c10);
- //BA.debugLineNum = 422;BA.debugLine="Activity.Invalidate";
+ //BA.debugLineNum = 424;BA.debugLine="Activity.Invalidate";
 mostCurrent._activity.Invalidate();
  };
- //BA.debugLineNum = 424;BA.debugLine="If Position=10 Then";
+ //BA.debugLineNum = 426;BA.debugLine="If Position=10 Then";
 if (_position==10) { 
- //BA.debugLineNum = 425;BA.debugLine="kvs4.DeleteAll";
+ //BA.debugLineNum = 427;BA.debugLine="kvs4.DeleteAll";
 mostCurrent._kvs4._deleteall();
- //BA.debugLineNum = 426;BA.debugLine="kvs4.PutSimple(\"10\",Value)";
+ //BA.debugLineNum = 428;BA.debugLine="kvs4.PutSimple(\"10\",Value)";
 mostCurrent._kvs4._putsimple("10",_value);
- //BA.debugLineNum = 427;BA.debugLine="ToastMessageShow(\"green \",False)";
+ //BA.debugLineNum = 429;BA.debugLine="ToastMessageShow(\"green \",False)";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("green "),anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 428;BA.debugLine="Log(\"Stored ---\")";
+ //BA.debugLineNum = 430;BA.debugLine="Log(\"Stored ---\")";
 anywheresoftware.b4a.keywords.Common.Log("Stored ---");
- //BA.debugLineNum = 429;BA.debugLine="Activity.Color=c11";
+ //BA.debugLineNum = 431;BA.debugLine="Activity.Color=c11";
 mostCurrent._activity.setColor(_c11);
- //BA.debugLineNum = 430;BA.debugLine="Activity.Invalidate";
+ //BA.debugLineNum = 432;BA.debugLine="Activity.Invalidate";
 mostCurrent._activity.Invalidate();
  };
- //BA.debugLineNum = 432;BA.debugLine="If Position=11 Then";
+ //BA.debugLineNum = 434;BA.debugLine="If Position=11 Then";
 if (_position==11) { 
- //BA.debugLineNum = 433;BA.debugLine="kvs4.DeleteAll";
+ //BA.debugLineNum = 435;BA.debugLine="kvs4.DeleteAll";
 mostCurrent._kvs4._deleteall();
- //BA.debugLineNum = 434;BA.debugLine="kvs4.PutSimple(\"11\",Value)";
+ //BA.debugLineNum = 436;BA.debugLine="kvs4.PutSimple(\"11\",Value)";
 mostCurrent._kvs4._putsimple("11",_value);
- //BA.debugLineNum = 435;BA.debugLine="ToastMessageShow(\"light green \",False)";
+ //BA.debugLineNum = 437;BA.debugLine="ToastMessageShow(\"light green \",False)";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("light green "),anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 436;BA.debugLine="Log(\"Stored ---\")";
+ //BA.debugLineNum = 438;BA.debugLine="Log(\"Stored ---\")";
 anywheresoftware.b4a.keywords.Common.Log("Stored ---");
- //BA.debugLineNum = 437;BA.debugLine="Activity.Color=c12";
+ //BA.debugLineNum = 439;BA.debugLine="Activity.Color=c12";
 mostCurrent._activity.setColor(_c12);
- //BA.debugLineNum = 438;BA.debugLine="Activity.Invalidate";
+ //BA.debugLineNum = 440;BA.debugLine="Activity.Invalidate";
 mostCurrent._activity.Invalidate();
  };
- //BA.debugLineNum = 440;BA.debugLine="If Position=12 Then";
+ //BA.debugLineNum = 442;BA.debugLine="If Position=12 Then";
 if (_position==12) { 
- //BA.debugLineNum = 441;BA.debugLine="kvs4.DeleteAll";
+ //BA.debugLineNum = 443;BA.debugLine="kvs4.DeleteAll";
 mostCurrent._kvs4._deleteall();
- //BA.debugLineNum = 442;BA.debugLine="kvs4.PutSimple(\"12\",Value)";
+ //BA.debugLineNum = 444;BA.debugLine="kvs4.PutSimple(\"12\",Value)";
 mostCurrent._kvs4._putsimple("12",_value);
- //BA.debugLineNum = 443;BA.debugLine="ToastMessageShow(\"yellow \",False)";
+ //BA.debugLineNum = 445;BA.debugLine="ToastMessageShow(\"yellow \",False)";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("yellow "),anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 444;BA.debugLine="Log(\"Stored ---\")";
+ //BA.debugLineNum = 446;BA.debugLine="Log(\"Stored ---\")";
 anywheresoftware.b4a.keywords.Common.Log("Stored ---");
- //BA.debugLineNum = 445;BA.debugLine="Activity.Color=c13";
+ //BA.debugLineNum = 447;BA.debugLine="Activity.Color=c13";
 mostCurrent._activity.setColor(_c13);
- //BA.debugLineNum = 446;BA.debugLine="Activity.Invalidate";
+ //BA.debugLineNum = 448;BA.debugLine="Activity.Invalidate";
 mostCurrent._activity.Invalidate();
  };
- //BA.debugLineNum = 448;BA.debugLine="If Position=13 Then";
+ //BA.debugLineNum = 450;BA.debugLine="If Position=13 Then";
 if (_position==13) { 
- //BA.debugLineNum = 449;BA.debugLine="kvs4.DeleteAll";
+ //BA.debugLineNum = 451;BA.debugLine="kvs4.DeleteAll";
 mostCurrent._kvs4._deleteall();
- //BA.debugLineNum = 450;BA.debugLine="kvs4.PutSimple(\"13\",Value)";
+ //BA.debugLineNum = 452;BA.debugLine="kvs4.PutSimple(\"13\",Value)";
 mostCurrent._kvs4._putsimple("13",_value);
- //BA.debugLineNum = 451;BA.debugLine="ToastMessageShow(\"cyan \",False)";
+ //BA.debugLineNum = 453;BA.debugLine="ToastMessageShow(\"cyan \",False)";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("cyan "),anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 452;BA.debugLine="Log(\"Stored ---\")";
+ //BA.debugLineNum = 454;BA.debugLine="Log(\"Stored ---\")";
 anywheresoftware.b4a.keywords.Common.Log("Stored ---");
- //BA.debugLineNum = 453;BA.debugLine="Activity.Color=c14";
+ //BA.debugLineNum = 455;BA.debugLine="Activity.Color=c14";
 mostCurrent._activity.setColor(_c14);
- //BA.debugLineNum = 454;BA.debugLine="Activity.Invalidate";
+ //BA.debugLineNum = 456;BA.debugLine="Activity.Invalidate";
 mostCurrent._activity.Invalidate();
  };
- //BA.debugLineNum = 456;BA.debugLine="If Position=14 Then";
+ //BA.debugLineNum = 458;BA.debugLine="If Position=14 Then";
 if (_position==14) { 
- //BA.debugLineNum = 457;BA.debugLine="kvs4.DeleteAll";
+ //BA.debugLineNum = 459;BA.debugLine="kvs4.DeleteAll";
 mostCurrent._kvs4._deleteall();
- //BA.debugLineNum = 458;BA.debugLine="kvs4.PutSimple(\"14\",Value)";
+ //BA.debugLineNum = 460;BA.debugLine="kvs4.PutSimple(\"14\",Value)";
 mostCurrent._kvs4._putsimple("14",_value);
- //BA.debugLineNum = 459;BA.debugLine="ToastMessageShow(\"cyan \",False)";
+ //BA.debugLineNum = 461;BA.debugLine="ToastMessageShow(\"cyan \",False)";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("cyan "),anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 460;BA.debugLine="Log(\"Stored ---\")";
+ //BA.debugLineNum = 462;BA.debugLine="Log(\"Stored ---\")";
 anywheresoftware.b4a.keywords.Common.Log("Stored ---");
- //BA.debugLineNum = 461;BA.debugLine="Activity.Color=c15";
+ //BA.debugLineNum = 463;BA.debugLine="Activity.Color=c15";
 mostCurrent._activity.setColor(_c15);
- //BA.debugLineNum = 462;BA.debugLine="Activity.Invalidate";
+ //BA.debugLineNum = 464;BA.debugLine="Activity.Invalidate";
 mostCurrent._activity.Invalidate();
  };
- //BA.debugLineNum = 464;BA.debugLine="End Sub";
+ //BA.debugLineNum = 466;BA.debugLine="End Sub";
 return "";
 }
 public static String  _acswitch1_checkedchange(boolean _checked) throws Exception{
@@ -653,46 +653,46 @@ if (anywheresoftware.b4a.keywords.Common.Not(_checked==anywheresoftware.b4a.keyw
 mostCurrent._dev.StopListening();
  //BA.debugLineNum = 168;BA.debugLine="StopService(Starter)";
 anywheresoftware.b4a.keywords.Common.StopService(mostCurrent.activityBA,(Object)(mostCurrent._starter.getObject()));
- //BA.debugLineNum = 169;BA.debugLine="kvs4sub.DeleteAll";
+ //BA.debugLineNum = 170;BA.debugLine="kvs4sub.DeleteAll";
 mostCurrent._kvs4sub._deleteall();
- //BA.debugLineNum = 170;BA.debugLine="kvs4sub.PutSimple(\"off\",Checked)";
+ //BA.debugLineNum = 171;BA.debugLine="kvs4sub.PutSimple(\"off\",Checked)";
 mostCurrent._kvs4sub._putsimple("off",(Object)(_checked));
- //BA.debugLineNum = 171;BA.debugLine="Log(\"end\")";
+ //BA.debugLineNum = 172;BA.debugLine="Log(\"end\")";
 anywheresoftware.b4a.keywords.Common.Log("end");
  }else {
- //BA.debugLineNum = 173;BA.debugLine="If kvs4sub.ContainsKey(\"off\") Then";
+ //BA.debugLineNum = 174;BA.debugLine="If kvs4sub.ContainsKey(\"off\") Then";
 if (mostCurrent._kvs4sub._containskey("off")) { 
- //BA.debugLineNum = 174;BA.debugLine="kvs4sub.DeleteAll";
+ //BA.debugLineNum = 175;BA.debugLine="kvs4sub.DeleteAll";
 mostCurrent._kvs4sub._deleteall();
- //BA.debugLineNum = 175;BA.debugLine="StartService(Starter)";
+ //BA.debugLineNum = 176;BA.debugLine="StartService(Starter)";
 anywheresoftware.b4a.keywords.Common.StartService(mostCurrent.activityBA,(Object)(mostCurrent._starter.getObject()));
- //BA.debugLineNum = 176;BA.debugLine="ToastMessageShow(\"Service started,,\",False)";
+ //BA.debugLineNum = 178;BA.debugLine="ToastMessageShow(\"Service started,,\",False)";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("Service started,,"),anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 177;BA.debugLine="Log(\"start\")";
+ //BA.debugLineNum = 179;BA.debugLine="Log(\"start\")";
 anywheresoftware.b4a.keywords.Common.Log("start");
  };
  };
- //BA.debugLineNum = 180;BA.debugLine="End Sub";
+ //BA.debugLineNum = 182;BA.debugLine="End Sub";
 return "";
 }
 public static String  _acswitch2_checkedchange(boolean _checked) throws Exception{
- //BA.debugLineNum = 194;BA.debugLine="Sub ACSwitch2_CheckedChange(Checked As Boolean)";
- //BA.debugLineNum = 196;BA.debugLine="End Sub";
+ //BA.debugLineNum = 196;BA.debugLine="Sub ACSwitch2_CheckedChange(Checked As Boolean)";
+ //BA.debugLineNum = 198;BA.debugLine="End Sub";
 return "";
 }
 public static String  _acswitch3_checkedchange(boolean _checked) throws Exception{
- //BA.debugLineNum = 190;BA.debugLine="Sub ACSwitch3_CheckedChange(Checked As Boolean)";
- //BA.debugLineNum = 192;BA.debugLine="End Sub";
+ //BA.debugLineNum = 192;BA.debugLine="Sub ACSwitch3_CheckedChange(Checked As Boolean)";
+ //BA.debugLineNum = 194;BA.debugLine="End Sub";
 return "";
 }
 public static String  _acswitch5_checkedchange(boolean _checked) throws Exception{
- //BA.debugLineNum = 186;BA.debugLine="Sub ACSwitch5_CheckedChange(Checked As Boolean)";
- //BA.debugLineNum = 188;BA.debugLine="End Sub";
+ //BA.debugLineNum = 188;BA.debugLine="Sub ACSwitch5_CheckedChange(Checked As Boolean)";
+ //BA.debugLineNum = 190;BA.debugLine="End Sub";
 return "";
 }
 public static String  _acswitch6_checkedchange(boolean _checked) throws Exception{
- //BA.debugLineNum = 182;BA.debugLine="Sub ACSwitch6_CheckedChange(Checked As Boolean)";
- //BA.debugLineNum = 184;BA.debugLine="End Sub";
+ //BA.debugLineNum = 184;BA.debugLine="Sub ACSwitch6_CheckedChange(Checked As Boolean)";
+ //BA.debugLineNum = 186;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_create(boolean _firsttime) throws Exception{
@@ -958,18 +958,18 @@ public static String  _listview1_itemclick(int _position,Object _value) throws E
 return "";
 }
 public static String  _panel2_touch(int _action,float _x,float _y) throws Exception{
- //BA.debugLineNum = 470;BA.debugLine="Sub Panel2_Touch (Action As Int, X As Float, Y As";
- //BA.debugLineNum = 472;BA.debugLine="End Sub";
+ //BA.debugLineNum = 472;BA.debugLine="Sub Panel2_Touch (Action As Int, X As Float, Y As";
+ //BA.debugLineNum = 474;BA.debugLine="End Sub";
 return "";
 }
 public static String  _popa_itemclicked(de.amberhome.objects.appcompat.ACMenuItemWrapper _item) throws Exception{
- //BA.debugLineNum = 206;BA.debugLine="Sub popa_ItemClicked (Item As ACMenuItem)";
- //BA.debugLineNum = 207;BA.debugLine="If Item = popa.GetItem(0) Then";
+ //BA.debugLineNum = 208;BA.debugLine="Sub popa_ItemClicked (Item As ACMenuItem)";
+ //BA.debugLineNum = 209;BA.debugLine="If Item = popa.GetItem(0) Then";
 if ((_item).equals((android.view.MenuItem)(mostCurrent._popa.GetItem((int) (0))))) { 
- //BA.debugLineNum = 208;BA.debugLine="Activity.Finish";
+ //BA.debugLineNum = 210;BA.debugLine="Activity.Finish";
 mostCurrent._activity.Finish();
  };
- //BA.debugLineNum = 210;BA.debugLine="End Sub";
+ //BA.debugLineNum = 212;BA.debugLine="End Sub";
 return "";
 }
 public static String  _process_globals() throws Exception{
@@ -978,175 +978,175 @@ public static String  _process_globals() throws Exception{
 return "";
 }
 public static String  _store_check() throws Exception{
- //BA.debugLineNum = 212;BA.debugLine="Sub store_check";
- //BA.debugLineNum = 213;BA.debugLine="If kvs4sub.ContainsKey(\"off\") Then";
+ //BA.debugLineNum = 214;BA.debugLine="Sub store_check";
+ //BA.debugLineNum = 215;BA.debugLine="If kvs4sub.ContainsKey(\"off\") Then";
 if (mostCurrent._kvs4sub._containskey("off")) { 
- //BA.debugLineNum = 214;BA.debugLine="ACSwitch1_CheckedChange(True)";
+ //BA.debugLineNum = 216;BA.debugLine="ACSwitch1_CheckedChange(True)";
 _acswitch1_checkedchange(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 215;BA.debugLine="ACSwitch1.Checked=True";
+ //BA.debugLineNum = 217;BA.debugLine="ACSwitch1.Checked=True";
 mostCurrent._acswitch1.setChecked(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 216;BA.debugLine="Log(\"AC_true->\")";
+ //BA.debugLineNum = 218;BA.debugLine="Log(\"AC_true->\")";
 anywheresoftware.b4a.keywords.Common.Log("AC_true->");
  }else {
- //BA.debugLineNum = 218;BA.debugLine="kvs4sub.DeleteAll";
+ //BA.debugLineNum = 220;BA.debugLine="kvs4sub.DeleteAll";
 mostCurrent._kvs4sub._deleteall();
- //BA.debugLineNum = 219;BA.debugLine="Log(\"AC_Off->\")";
+ //BA.debugLineNum = 221;BA.debugLine="Log(\"AC_Off->\")";
 anywheresoftware.b4a.keywords.Common.Log("AC_Off->");
- //BA.debugLineNum = 220;BA.debugLine="ACSwitch1.Checked=False";
+ //BA.debugLineNum = 222;BA.debugLine="ACSwitch1.Checked=False";
 mostCurrent._acswitch1.setChecked(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 221;BA.debugLine="ACSwitch1_CheckedChange(False)";
+ //BA.debugLineNum = 223;BA.debugLine="ACSwitch1_CheckedChange(False)";
 _acswitch1_checkedchange(anywheresoftware.b4a.keywords.Common.False);
  };
- //BA.debugLineNum = 224;BA.debugLine="If kvs4.ContainsKey(\"0\")Then";
+ //BA.debugLineNum = 226;BA.debugLine="If kvs4.ContainsKey(\"0\")Then";
 if (mostCurrent._kvs4._containskey("0")) { 
- //BA.debugLineNum = 225;BA.debugLine="Log(\"AC_true->1\")";
+ //BA.debugLineNum = 227;BA.debugLine="Log(\"AC_true->1\")";
 anywheresoftware.b4a.keywords.Common.Log("AC_true->1");
- //BA.debugLineNum = 227;BA.debugLine="ACSpinner1.SelectedIndex=0";
+ //BA.debugLineNum = 229;BA.debugLine="ACSpinner1.SelectedIndex=0";
 mostCurrent._acspinner1.setSelectedIndex((int) (0));
- //BA.debugLineNum = 228;BA.debugLine="Activity.Color=c1";
+ //BA.debugLineNum = 230;BA.debugLine="Activity.Color=c1";
 mostCurrent._activity.setColor(_c1);
  };
- //BA.debugLineNum = 230;BA.debugLine="If kvs4.ContainsKey(\"1\")Then";
+ //BA.debugLineNum = 232;BA.debugLine="If kvs4.ContainsKey(\"1\")Then";
 if (mostCurrent._kvs4._containskey("1")) { 
- //BA.debugLineNum = 231;BA.debugLine="Log(\"AC_true->2\")";
+ //BA.debugLineNum = 233;BA.debugLine="Log(\"AC_true->2\")";
 anywheresoftware.b4a.keywords.Common.Log("AC_true->2");
- //BA.debugLineNum = 232;BA.debugLine="ACSpinner1.SelectedIndex=1";
+ //BA.debugLineNum = 234;BA.debugLine="ACSpinner1.SelectedIndex=1";
 mostCurrent._acspinner1.setSelectedIndex((int) (1));
- //BA.debugLineNum = 233;BA.debugLine="Activity.Color=c2";
+ //BA.debugLineNum = 235;BA.debugLine="Activity.Color=c2";
 mostCurrent._activity.setColor(_c2);
  }else {
  };
- //BA.debugLineNum = 237;BA.debugLine="If kvs4.ContainsKey(\"2\")Then";
+ //BA.debugLineNum = 239;BA.debugLine="If kvs4.ContainsKey(\"2\")Then";
 if (mostCurrent._kvs4._containskey("2")) { 
- //BA.debugLineNum = 238;BA.debugLine="Log(\"AC_true->3\")";
+ //BA.debugLineNum = 240;BA.debugLine="Log(\"AC_true->3\")";
 anywheresoftware.b4a.keywords.Common.Log("AC_true->3");
- //BA.debugLineNum = 239;BA.debugLine="Activity.Color=c3";
+ //BA.debugLineNum = 241;BA.debugLine="Activity.Color=c3";
 mostCurrent._activity.setColor(_c3);
- //BA.debugLineNum = 240;BA.debugLine="ACSpinner1.SelectedIndex=2";
+ //BA.debugLineNum = 242;BA.debugLine="ACSpinner1.SelectedIndex=2";
 mostCurrent._acspinner1.setSelectedIndex((int) (2));
  }else {
  };
- //BA.debugLineNum = 245;BA.debugLine="If kvs4.ContainsKey(\"3\")Then";
+ //BA.debugLineNum = 247;BA.debugLine="If kvs4.ContainsKey(\"3\")Then";
 if (mostCurrent._kvs4._containskey("3")) { 
- //BA.debugLineNum = 246;BA.debugLine="Log(\"AC_true->4\")";
+ //BA.debugLineNum = 248;BA.debugLine="Log(\"AC_true->4\")";
 anywheresoftware.b4a.keywords.Common.Log("AC_true->4");
- //BA.debugLineNum = 248;BA.debugLine="ACSpinner1.SelectedIndex=3";
+ //BA.debugLineNum = 250;BA.debugLine="ACSpinner1.SelectedIndex=3";
 mostCurrent._acspinner1.setSelectedIndex((int) (3));
- //BA.debugLineNum = 249;BA.debugLine="Activity.Color=c4";
+ //BA.debugLineNum = 251;BA.debugLine="Activity.Color=c4";
 mostCurrent._activity.setColor(_c4);
  }else {
  };
- //BA.debugLineNum = 253;BA.debugLine="If kvs4.ContainsKey(\"4\")Then";
+ //BA.debugLineNum = 255;BA.debugLine="If kvs4.ContainsKey(\"4\")Then";
 if (mostCurrent._kvs4._containskey("4")) { 
- //BA.debugLineNum = 254;BA.debugLine="Log(\"AC_true->4\")";
+ //BA.debugLineNum = 256;BA.debugLine="Log(\"AC_true->4\")";
 anywheresoftware.b4a.keywords.Common.Log("AC_true->4");
- //BA.debugLineNum = 256;BA.debugLine="ACSpinner1.SelectedIndex=4";
+ //BA.debugLineNum = 258;BA.debugLine="ACSpinner1.SelectedIndex=4";
 mostCurrent._acspinner1.setSelectedIndex((int) (4));
- //BA.debugLineNum = 257;BA.debugLine="Activity.Color=c5";
+ //BA.debugLineNum = 259;BA.debugLine="Activity.Color=c5";
 mostCurrent._activity.setColor(_c5);
  }else {
  };
- //BA.debugLineNum = 261;BA.debugLine="If kvs4.ContainsKey(\"5\")Then";
+ //BA.debugLineNum = 263;BA.debugLine="If kvs4.ContainsKey(\"5\")Then";
 if (mostCurrent._kvs4._containskey("5")) { 
- //BA.debugLineNum = 262;BA.debugLine="Log(\"AC_true->4\")";
+ //BA.debugLineNum = 264;BA.debugLine="Log(\"AC_true->4\")";
 anywheresoftware.b4a.keywords.Common.Log("AC_true->4");
- //BA.debugLineNum = 263;BA.debugLine="Activity.Color=c6";
+ //BA.debugLineNum = 265;BA.debugLine="Activity.Color=c6";
 mostCurrent._activity.setColor(_c6);
- //BA.debugLineNum = 265;BA.debugLine="ACSpinner1.SelectedIndex=5";
+ //BA.debugLineNum = 267;BA.debugLine="ACSpinner1.SelectedIndex=5";
 mostCurrent._acspinner1.setSelectedIndex((int) (5));
  }else {
  };
- //BA.debugLineNum = 269;BA.debugLine="If kvs4.ContainsKey(\"6\")Then";
+ //BA.debugLineNum = 271;BA.debugLine="If kvs4.ContainsKey(\"6\")Then";
 if (mostCurrent._kvs4._containskey("6")) { 
- //BA.debugLineNum = 270;BA.debugLine="Log(\"AC_true->4\")";
+ //BA.debugLineNum = 272;BA.debugLine="Log(\"AC_true->4\")";
 anywheresoftware.b4a.keywords.Common.Log("AC_true->4");
- //BA.debugLineNum = 272;BA.debugLine="ACSpinner1.SelectedIndex=6";
+ //BA.debugLineNum = 274;BA.debugLine="ACSpinner1.SelectedIndex=6";
 mostCurrent._acspinner1.setSelectedIndex((int) (6));
- //BA.debugLineNum = 273;BA.debugLine="Activity.Color=c7";
+ //BA.debugLineNum = 275;BA.debugLine="Activity.Color=c7";
 mostCurrent._activity.setColor(_c7);
  }else {
  };
- //BA.debugLineNum = 277;BA.debugLine="If kvs4.ContainsKey(\"7\")Then";
+ //BA.debugLineNum = 279;BA.debugLine="If kvs4.ContainsKey(\"7\")Then";
 if (mostCurrent._kvs4._containskey("7")) { 
- //BA.debugLineNum = 278;BA.debugLine="Log(\"AC_true->4\")";
+ //BA.debugLineNum = 280;BA.debugLine="Log(\"AC_true->4\")";
 anywheresoftware.b4a.keywords.Common.Log("AC_true->4");
- //BA.debugLineNum = 279;BA.debugLine="Activity.Color=c8";
+ //BA.debugLineNum = 281;BA.debugLine="Activity.Color=c8";
 mostCurrent._activity.setColor(_c8);
- //BA.debugLineNum = 281;BA.debugLine="ACSpinner1.SelectedIndex=7";
+ //BA.debugLineNum = 283;BA.debugLine="ACSpinner1.SelectedIndex=7";
 mostCurrent._acspinner1.setSelectedIndex((int) (7));
  }else {
  };
- //BA.debugLineNum = 285;BA.debugLine="If kvs4.ContainsKey(\"8\")Then";
+ //BA.debugLineNum = 287;BA.debugLine="If kvs4.ContainsKey(\"8\")Then";
 if (mostCurrent._kvs4._containskey("8")) { 
- //BA.debugLineNum = 286;BA.debugLine="Log(\"AC_true->4\")";
+ //BA.debugLineNum = 288;BA.debugLine="Log(\"AC_true->4\")";
 anywheresoftware.b4a.keywords.Common.Log("AC_true->4");
- //BA.debugLineNum = 288;BA.debugLine="Activity.Color=c9";
+ //BA.debugLineNum = 290;BA.debugLine="Activity.Color=c9";
 mostCurrent._activity.setColor(_c9);
- //BA.debugLineNum = 289;BA.debugLine="ACSpinner1.SelectedIndex=8";
+ //BA.debugLineNum = 291;BA.debugLine="ACSpinner1.SelectedIndex=8";
 mostCurrent._acspinner1.setSelectedIndex((int) (8));
  }else {
  };
- //BA.debugLineNum = 293;BA.debugLine="If kvs4.ContainsKey(\"9\")Then";
+ //BA.debugLineNum = 295;BA.debugLine="If kvs4.ContainsKey(\"9\")Then";
 if (mostCurrent._kvs4._containskey("9")) { 
- //BA.debugLineNum = 294;BA.debugLine="Log(\"AC_true->4\")";
+ //BA.debugLineNum = 296;BA.debugLine="Log(\"AC_true->4\")";
 anywheresoftware.b4a.keywords.Common.Log("AC_true->4");
- //BA.debugLineNum = 295;BA.debugLine="Activity.Color=c10";
+ //BA.debugLineNum = 297;BA.debugLine="Activity.Color=c10";
 mostCurrent._activity.setColor(_c10);
- //BA.debugLineNum = 296;BA.debugLine="ACSpinner1.SelectedIndex=9";
+ //BA.debugLineNum = 298;BA.debugLine="ACSpinner1.SelectedIndex=9";
 mostCurrent._acspinner1.setSelectedIndex((int) (9));
  }else {
  };
- //BA.debugLineNum = 301;BA.debugLine="If kvs4.ContainsKey(\"10\")Then";
+ //BA.debugLineNum = 303;BA.debugLine="If kvs4.ContainsKey(\"10\")Then";
 if (mostCurrent._kvs4._containskey("10")) { 
- //BA.debugLineNum = 302;BA.debugLine="Log(\"AC_true->4\")";
+ //BA.debugLineNum = 304;BA.debugLine="Log(\"AC_true->4\")";
 anywheresoftware.b4a.keywords.Common.Log("AC_true->4");
- //BA.debugLineNum = 303;BA.debugLine="Activity.Color=c11";
+ //BA.debugLineNum = 305;BA.debugLine="Activity.Color=c11";
 mostCurrent._activity.setColor(_c11);
- //BA.debugLineNum = 304;BA.debugLine="ACSpinner1.SelectedIndex=10";
+ //BA.debugLineNum = 306;BA.debugLine="ACSpinner1.SelectedIndex=10";
 mostCurrent._acspinner1.setSelectedIndex((int) (10));
  }else {
  };
- //BA.debugLineNum = 309;BA.debugLine="If kvs4.ContainsKey(\"11\")Then";
+ //BA.debugLineNum = 311;BA.debugLine="If kvs4.ContainsKey(\"11\")Then";
 if (mostCurrent._kvs4._containskey("11")) { 
- //BA.debugLineNum = 310;BA.debugLine="Log(\"AC_true->4\")";
+ //BA.debugLineNum = 312;BA.debugLine="Log(\"AC_true->4\")";
 anywheresoftware.b4a.keywords.Common.Log("AC_true->4");
- //BA.debugLineNum = 312;BA.debugLine="ACSpinner1.SelectedIndex=11";
+ //BA.debugLineNum = 314;BA.debugLine="ACSpinner1.SelectedIndex=11";
 mostCurrent._acspinner1.setSelectedIndex((int) (11));
- //BA.debugLineNum = 313;BA.debugLine="Activity.Color=c12";
+ //BA.debugLineNum = 315;BA.debugLine="Activity.Color=c12";
 mostCurrent._activity.setColor(_c12);
  }else {
  };
- //BA.debugLineNum = 317;BA.debugLine="If kvs4.ContainsKey(\"12\")Then";
+ //BA.debugLineNum = 319;BA.debugLine="If kvs4.ContainsKey(\"12\")Then";
 if (mostCurrent._kvs4._containskey("12")) { 
- //BA.debugLineNum = 318;BA.debugLine="Log(\"AC_true->4\")";
+ //BA.debugLineNum = 320;BA.debugLine="Log(\"AC_true->4\")";
 anywheresoftware.b4a.keywords.Common.Log("AC_true->4");
- //BA.debugLineNum = 320;BA.debugLine="ACSpinner1.SelectedIndex=12";
+ //BA.debugLineNum = 322;BA.debugLine="ACSpinner1.SelectedIndex=12";
 mostCurrent._acspinner1.setSelectedIndex((int) (12));
- //BA.debugLineNum = 321;BA.debugLine="Activity.Color=c13";
+ //BA.debugLineNum = 323;BA.debugLine="Activity.Color=c13";
 mostCurrent._activity.setColor(_c13);
  }else {
  };
- //BA.debugLineNum = 325;BA.debugLine="If kvs4.ContainsKey(\"13\")Then";
+ //BA.debugLineNum = 327;BA.debugLine="If kvs4.ContainsKey(\"13\")Then";
 if (mostCurrent._kvs4._containskey("13")) { 
- //BA.debugLineNum = 326;BA.debugLine="Log(\"AC_true->4\")";
+ //BA.debugLineNum = 328;BA.debugLine="Log(\"AC_true->4\")";
 anywheresoftware.b4a.keywords.Common.Log("AC_true->4");
- //BA.debugLineNum = 327;BA.debugLine="ACSpinner1.SelectedIndex=13";
+ //BA.debugLineNum = 329;BA.debugLine="ACSpinner1.SelectedIndex=13";
 mostCurrent._acspinner1.setSelectedIndex((int) (13));
- //BA.debugLineNum = 329;BA.debugLine="Activity.Color=c14";
+ //BA.debugLineNum = 331;BA.debugLine="Activity.Color=c14";
 mostCurrent._activity.setColor(_c14);
  }else {
  };
- //BA.debugLineNum = 333;BA.debugLine="If kvs4.ContainsKey(\"14\")Then";
+ //BA.debugLineNum = 335;BA.debugLine="If kvs4.ContainsKey(\"14\")Then";
 if (mostCurrent._kvs4._containskey("14")) { 
- //BA.debugLineNum = 334;BA.debugLine="Log(\"AC_true->4\")";
+ //BA.debugLineNum = 336;BA.debugLine="Log(\"AC_true->4\")";
 anywheresoftware.b4a.keywords.Common.Log("AC_true->4");
- //BA.debugLineNum = 336;BA.debugLine="ACSpinner1.SelectedIndex=14";
+ //BA.debugLineNum = 338;BA.debugLine="ACSpinner1.SelectedIndex=14";
 mostCurrent._acspinner1.setSelectedIndex((int) (14));
- //BA.debugLineNum = 337;BA.debugLine="Activity.Color=c15";
+ //BA.debugLineNum = 339;BA.debugLine="Activity.Color=c15";
 mostCurrent._activity.setColor(_c15);
  }else {
  };
- //BA.debugLineNum = 341;BA.debugLine="End Sub";
+ //BA.debugLineNum = 343;BA.debugLine="End Sub";
 return "";
 }
 }

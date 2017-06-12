@@ -4,7 +4,7 @@ ModulesStructureVersion=1
 B4A=true
 @EndOfDesignText@
 #Region  Service Attributes 
-	#StartAtBoot: true
+	#StartAtBoot: false
 	
 #End Region
 
@@ -15,7 +15,7 @@ Sub Process_Globals
 End Sub
 
 Sub Service_Create
-	rv = ConfigureHomeWidget("wid", "rv", 30, "BATT-Cat Widget")
+	rv = ConfigureHomeWidget("wid", "rv", 30, "BATT-CaTT Widget")
 	
 	rv.SetTextColor("label3",Colors.ARGB(230,0,0,0))
 	rv.SetTextColor("label2",Colors.ARGB(180,0,0,0))
@@ -27,10 +27,12 @@ Sub Service_Create
 	rv.SetImage("im1",LoadBitmap(File.DirAssets, "Battery.png"))
 	rv.SetVisible("im1",True)
 	rv.SetVisible("Progressbar1",True)
-	bat.Initialize("bat")
+	Dim pi As PhoneId
+	bat.InitializeWithPhoneState("bat",pi)
 End Sub
 
 Sub Service_Start (StartingIntent As Intent)
+
     If rv.HandleWidgetEvents(StartingIntent) Then Return
 End Sub
 

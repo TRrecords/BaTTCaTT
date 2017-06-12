@@ -133,54 +133,54 @@ public com.batcat.settings _settings = null;
 public com.batcat.charts _charts = null;
 public static String  _bat_batterychanged(int _level,int _scale,boolean _plugged,anywheresoftware.b4a.objects.IntentWrapper _intent) throws Exception{
 String _temp = "";
- //BA.debugLineNum = 52;BA.debugLine="Sub bat_BatteryChanged (Level As Int, Scale As Int";
- //BA.debugLineNum = 53;BA.debugLine="Dim temp As String";
+ //BA.debugLineNum = 54;BA.debugLine="Sub bat_BatteryChanged (Level As Int, Scale As Int";
+ //BA.debugLineNum = 55;BA.debugLine="Dim temp As String";
 _temp = "";
- //BA.debugLineNum = 54;BA.debugLine="temp=Intent.GetExtra(\"temperature\")/10";
+ //BA.debugLineNum = 56;BA.debugLine="temp=Intent.GetExtra(\"temperature\")/10";
 _temp = BA.NumberToString((double)(BA.ObjectToNumber(_intent.GetExtra("temperature")))/(double)10);
- //BA.debugLineNum = 55;BA.debugLine="rv.SetProgress(\"Progressbar1\",Level)";
+ //BA.debugLineNum = 57;BA.debugLine="rv.SetProgress(\"Progressbar1\",Level)";
 _rv.SetProgress(processBA,"Progressbar1",_level);
- //BA.debugLineNum = 56;BA.debugLine="rv.SetText(\"label1\",temp&\"°C\")";
+ //BA.debugLineNum = 58;BA.debugLine="rv.SetText(\"label1\",temp&\"°C\")";
 _rv.SetText(processBA,"label1",BA.ObjectToCharSequence(_temp+"°C"));
- //BA.debugLineNum = 57;BA.debugLine="rv.SetText(\"label2\",Intent.GetExtra(\"technology\")";
+ //BA.debugLineNum = 59;BA.debugLine="rv.SetText(\"label2\",Intent.GetExtra(\"technology\")";
 _rv.SetText(processBA,"label2",BA.ObjectToCharSequence(_intent.GetExtra("technology")));
- //BA.debugLineNum = 58;BA.debugLine="rv.SetText(\"label3\",Level&\"%\")";
+ //BA.debugLineNum = 60;BA.debugLine="rv.SetText(\"label3\",Level&\"%\")";
 _rv.SetText(processBA,"label3",BA.ObjectToCharSequence(BA.NumberToString(_level)+"%"));
- //BA.debugLineNum = 59;BA.debugLine="If Plugged=True Then";
+ //BA.debugLineNum = 61;BA.debugLine="If Plugged=True Then";
 if (_plugged==anywheresoftware.b4a.keywords.Common.True) { 
- //BA.debugLineNum = 60;BA.debugLine="rv.SetImage(\"im1\",LoadBitmap(File.DirAssets, \"Ba";
+ //BA.debugLineNum = 62;BA.debugLine="rv.SetImage(\"im1\",LoadBitmap(File.DirAssets, \"Ba";
 _rv.SetImage(processBA,"im1",(android.graphics.Bitmap)(anywheresoftware.b4a.keywords.Common.LoadBitmap(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"Battery.png").getObject()));
- //BA.debugLineNum = 61;BA.debugLine="rv.SetVisible(\"im1\",True)";
+ //BA.debugLineNum = 63;BA.debugLine="rv.SetVisible(\"im1\",True)";
 _rv.SetVisible(processBA,"im1",anywheresoftware.b4a.keywords.Common.True);
  };
- //BA.debugLineNum = 63;BA.debugLine="If Level < 15 Then";
+ //BA.debugLineNum = 65;BA.debugLine="If Level < 15 Then";
 if (_level<15) { 
- //BA.debugLineNum = 64;BA.debugLine="rv.SetImage(\"im1\",LoadBitmap(File.DirAssets, \"Ba";
+ //BA.debugLineNum = 66;BA.debugLine="rv.SetImage(\"im1\",LoadBitmap(File.DirAssets, \"Ba";
 _rv.SetImage(processBA,"im1",(android.graphics.Bitmap)(anywheresoftware.b4a.keywords.Common.LoadBitmap(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"Battery.png").getObject()));
- //BA.debugLineNum = 65;BA.debugLine="rv.SetTextColor(\"label3\",Colors.ARGB(150,255,255";
+ //BA.debugLineNum = 67;BA.debugLine="rv.SetTextColor(\"label3\",Colors.ARGB(150,255,255";
 _rv.SetTextColor(processBA,"label3",anywheresoftware.b4a.keywords.Common.Colors.ARGB((int) (150),(int) (255),(int) (255),(int) (255)));
- //BA.debugLineNum = 66;BA.debugLine="rv.SetTextSize(\"lablel3\",18)";
+ //BA.debugLineNum = 68;BA.debugLine="rv.SetTextSize(\"lablel3\",18)";
 _rv.SetTextSize(processBA,"lablel3",(float) (18));
- //BA.debugLineNum = 67;BA.debugLine="rv.SetText(\"label2\",\"ATTENTION!\")";
+ //BA.debugLineNum = 69;BA.debugLine="rv.SetText(\"label2\",\"ATTENTION!\")";
 _rv.SetText(processBA,"label2",BA.ObjectToCharSequence("ATTENTION!"));
- //BA.debugLineNum = 68;BA.debugLine="rv.SetText(\"label3\",\"Battery low! \"&Level)";
+ //BA.debugLineNum = 70;BA.debugLine="rv.SetText(\"label3\",\"Battery low! \"&Level)";
 _rv.SetText(processBA,"label3",BA.ObjectToCharSequence("Battery low! "+BA.NumberToString(_level)));
- //BA.debugLineNum = 69;BA.debugLine="rv.SetVisible(\"im1\",True)";
+ //BA.debugLineNum = 71;BA.debugLine="rv.SetVisible(\"im1\",True)";
 _rv.SetVisible(processBA,"im1",anywheresoftware.b4a.keywords.Common.True);
  };
- //BA.debugLineNum = 71;BA.debugLine="End Sub";
+ //BA.debugLineNum = 73;BA.debugLine="End Sub";
 return "";
 }
 public static String  _im1_click() throws Exception{
- //BA.debugLineNum = 44;BA.debugLine="Sub im1_click";
- //BA.debugLineNum = 45;BA.debugLine="StartActivity(Main)";
+ //BA.debugLineNum = 46;BA.debugLine="Sub im1_click";
+ //BA.debugLineNum = 47;BA.debugLine="StartActivity(Main)";
 anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(mostCurrent._main.getObject()));
- //BA.debugLineNum = 46;BA.debugLine="End Sub";
+ //BA.debugLineNum = 48;BA.debugLine="End Sub";
 return "";
 }
 public static String  _label1_click() throws Exception{
- //BA.debugLineNum = 48;BA.debugLine="Sub label1_click";
- //BA.debugLineNum = 50;BA.debugLine="End Sub";
+ //BA.debugLineNum = 50;BA.debugLine="Sub label1_click";
+ //BA.debugLineNum = 52;BA.debugLine="End Sub";
 return "";
 }
 public static String  _process_globals() throws Exception{
@@ -193,20 +193,21 @@ _bat = new anywheresoftware.b4a.phone.PhoneEvents();
 return "";
 }
 public static String  _rv_disabled() throws Exception{
- //BA.debugLineNum = 36;BA.debugLine="Sub rv_Disabled";
- //BA.debugLineNum = 37;BA.debugLine="StopService(\"\")";
+ //BA.debugLineNum = 38;BA.debugLine="Sub rv_Disabled";
+ //BA.debugLineNum = 39;BA.debugLine="StopService(\"\")";
 anywheresoftware.b4a.keywords.Common.StopService(processBA,(Object)(""));
- //BA.debugLineNum = 38;BA.debugLine="End Sub";
+ //BA.debugLineNum = 40;BA.debugLine="End Sub";
 return "";
 }
 public static String  _rv_requestupdate() throws Exception{
- //BA.debugLineNum = 32;BA.debugLine="Sub rv_RequestUpdate";
- //BA.debugLineNum = 33;BA.debugLine="rv.UpdateWidget";
+ //BA.debugLineNum = 34;BA.debugLine="Sub rv_RequestUpdate";
+ //BA.debugLineNum = 35;BA.debugLine="rv.UpdateWidget";
 _rv.UpdateWidget(processBA);
- //BA.debugLineNum = 34;BA.debugLine="End Sub";
+ //BA.debugLineNum = 36;BA.debugLine="End Sub";
 return "";
 }
 public static String  _service_create() throws Exception{
+anywheresoftware.b4a.phone.Phone.PhoneId _pi = null;
  //BA.debugLineNum = 12;BA.debugLine="Sub Service_Create";
  //BA.debugLineNum = 13;BA.debugLine="rv = ConfigureHomeWidget(\"wid\", \"rv\", 30, \"BATT-C";
 _rv = anywheresoftware.b4a.objects.RemoteViewsWrapper.createRemoteViews(processBA, R.layout.hw_layout, "wid","rv");
@@ -228,22 +229,24 @@ _rv.SetImage(processBA,"im1",(android.graphics.Bitmap)(anywheresoftware.b4a.keyw
 _rv.SetVisible(processBA,"im1",anywheresoftware.b4a.keywords.Common.True);
  //BA.debugLineNum = 24;BA.debugLine="rv.SetVisible(\"Progressbar1\",True)";
 _rv.SetVisible(processBA,"Progressbar1",anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 25;BA.debugLine="bat.Initialize(\"bat\")";
-_bat.Initialize(processBA,"bat");
- //BA.debugLineNum = 26;BA.debugLine="End Sub";
+ //BA.debugLineNum = 25;BA.debugLine="Dim pi As PhoneId";
+_pi = new anywheresoftware.b4a.phone.Phone.PhoneId();
+ //BA.debugLineNum = 26;BA.debugLine="bat.InitializeWithPhoneState(\"bat\",pi)";
+_bat.InitializeWithPhoneState(processBA,"bat",_pi);
+ //BA.debugLineNum = 27;BA.debugLine="End Sub";
 return "";
 }
 public static String  _service_destroy() throws Exception{
- //BA.debugLineNum = 40;BA.debugLine="Sub Service_Destroy";
- //BA.debugLineNum = 42;BA.debugLine="End Sub";
+ //BA.debugLineNum = 42;BA.debugLine="Sub Service_Destroy";
+ //BA.debugLineNum = 44;BA.debugLine="End Sub";
 return "";
 }
 public static String  _service_start(anywheresoftware.b4a.objects.IntentWrapper _startingintent) throws Exception{
- //BA.debugLineNum = 28;BA.debugLine="Sub Service_Start (StartingIntent As Intent)";
- //BA.debugLineNum = 29;BA.debugLine="If rv.HandleWidgetEvents(StartingIntent) Then";
+ //BA.debugLineNum = 29;BA.debugLine="Sub Service_Start (StartingIntent As Intent)";
+ //BA.debugLineNum = 31;BA.debugLine="If rv.HandleWidgetEvents(StartingIntent) Then";
 if (_rv.HandleWidgetEvents(processBA,(android.content.Intent)(_startingintent.getObject()))) { 
 if (true) return "";};
- //BA.debugLineNum = 30;BA.debugLine="End Sub";
+ //BA.debugLineNum = 32;BA.debugLine="End Sub";
 return "";
 }
 }
